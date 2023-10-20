@@ -17,7 +17,7 @@ public class Solution {
         int a = 3;
         int b = 2;
 
-        // System.out.print("два");
+        System.out.print("два");
         // System.out.print(b);
         // System.out.print(" плюс ");
         // System.out.print(" минус ");

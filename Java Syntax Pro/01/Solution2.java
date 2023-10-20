@@ -14,7 +14,7 @@ package com.javarush.task.task01.task0101;
 •	Выводимый текст должен соответствовать заданию.
 */
 
-public class Solution {
+class Solution {
     public static void main(String[] args) {
         
     }
