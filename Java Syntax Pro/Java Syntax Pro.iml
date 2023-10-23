@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/01" isTestSource="false" packagePrefix="com.javarush.task.task01.task0142" />
+      <sourceFolder url="file://$MODULE_DIR$/02" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0201" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
