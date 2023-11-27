@@ -1,0 +1,7 @@
+https://javarush.com/groups/posts/cikly-java                       //Циклы в Java
+
+https://javarush.com/groups/posts/2136-ustroystvo-vejshestvennihkh-chisel              //Устройство вещественных чисел
+
+https://javarush.com/groups/posts/for-v-java                                     //Цикл For в Java
+
+https://javarush.com/groups/posts/1876-operator-while                            //Цикл While в Java

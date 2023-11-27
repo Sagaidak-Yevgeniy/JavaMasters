@@ -1,0 +1,3 @@
+https://javarush.com/groups/posts/2463-debug-v-intellij-idea-gayd-dlja-novichkov            //Debug в Intellij IDEA: гайд для новичков
+
+https://javarush.com/groups/posts/2494-10-sposobov-uluchshitjh-kod-proverennihkh-na-lichnom-opihte      //10 способов улучшить код, проверенных на личном опыте

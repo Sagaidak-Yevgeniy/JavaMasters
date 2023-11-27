@@ -1,0 +1,3 @@
+https://javarush.com/groups/posts/2704-kommentarii-v-jazihke-java                 //Комментарии в языке Java
+
+https://javarush.com/groups/posts/2690-systemoutprintln                        //System.out.println

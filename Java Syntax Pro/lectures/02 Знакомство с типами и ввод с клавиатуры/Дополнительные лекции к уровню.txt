@@ -1,0 +1,5 @@
+https://javarush.com/groups/posts/klass-scanner                            //Класс Scanner в Java
+
+https://javarush.com/groups/posts/1919-schitihvanie-s-klaviaturih--riderih        //Считывание с клавиатуры — «ридеры»
+
+https://javarush.com/groups/posts/1924-operacii-nad-chislami-v-java            //Операции над числами в Java

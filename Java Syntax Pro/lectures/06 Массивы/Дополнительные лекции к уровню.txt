@@ -1,0 +1,9 @@
+https://javarush.com/groups/posts/massivy-java                              //Массивы в Java
+
+https://javarush.com/groups/posts/mnogomernye-massivy                       //Многомерные массивы
+
+https://javarush.com/groups/posts/1932-koe-chto-o-massivakh                  // Кое-что о массивах в Java
+
+https://javarush.com/groups/posts/1933-klass-arrays-i-ego-ispoljhzovanie     // Класс Arrays и его использование
+
+https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Arrays.html       //Class Arrays documentations

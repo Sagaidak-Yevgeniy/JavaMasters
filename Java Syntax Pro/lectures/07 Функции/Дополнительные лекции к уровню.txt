@@ -1,0 +1,3 @@
+https://javarush.com/groups/posts/1988-modifikatorih-dostupa-private-protected-default-public         // Модификаторы доступа. Private, protected, default, public
+
+https://javarush.com/groups/posts/2127-magija-java-obhhjavlenie-i-inicializacija-peremennihkh        // Магия Java: Объявление и инициализация переменных

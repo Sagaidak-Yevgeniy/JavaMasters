@@ -1,0 +1,3 @@
+Equals в Java и String compare - Сравнение строк                //Equals в Java и String compare - Сравнение строк
+
+https://javarush.com/groups/posts/ternarnyj-operator               //Тернарный оператор в Java
