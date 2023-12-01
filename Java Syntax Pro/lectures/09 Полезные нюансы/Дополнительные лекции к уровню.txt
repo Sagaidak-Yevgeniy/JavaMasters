@@ -1,0 +1,5 @@
+https://javarush.com/groups/posts/1925-pobitovihe-operacii                  //Побитовые операции в Java
+
+Теория вероятностей на практике или знаете ли вы о Random                   //Теория вероятностей на практике или знаете ли вы о Random
+
+https://javarush.com/groups/posts/2762-klass-java-math-i-ego-metodih         //Java Math класс и его методы
