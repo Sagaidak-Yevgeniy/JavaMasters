@@ -1,0 +1,9 @@
+https://javarush.com/groups/posts/konstruktory-v-java-1            //Конструкторы в Java
+
+https://javarush.com/groups/posts/1940-klass-hashmap-              //HashMap в Java— что за карта такая?
+
+https://javarush.com/groups/posts/literaly-v-java                // Литералы в Java
+
+https://javarush.com/groups/posts/1921-ehkranirovanie-simvolov      //Экранирование символов
+
+https://javarush.com/groups/posts/2347-klass-string-v-java           //Класс String в Java
