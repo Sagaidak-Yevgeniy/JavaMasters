@@ -1,0 +1,19 @@
+https://javarush.com/groups/posts/1949-znakomstvo-s-klassami-napisanie-sobstvennihkh-klassov-konstruktorih                    // Знакомство с классами: написание  
+                                                                                                                            собственных классов, конструкторы
+
+https://javarush.com/groups/posts/konstruktory-v-java-1                                                             //Конструкторы в Java
+
+
+https://javarush.com/groups/posts/1927-konstruktorih-bazovihkh-klassov--                                       //Конструкторы базовых классов
+
+
+https://javarush.com/groups/posts/1950-metodih-ikh-parametrih-vzaimodeystvie-i-peregruzka                   //Методы, их параметры, взаимодействие и перегрузка
+
+
+https://javarush.com/groups/posts/1928-getterih-i-setterih                                                //Геттеры и сеттеры 
+
+
+https://javarush.com/groups/posts/1930-zhiznennihy-cikl-obhhekta-                                         //Жизненный цикл объекта
+
+
+https://javarush.com/groups/posts/1931-ejshje-o-sborjshike-musora-                                     //Ещё о сборщике мусора в Java
