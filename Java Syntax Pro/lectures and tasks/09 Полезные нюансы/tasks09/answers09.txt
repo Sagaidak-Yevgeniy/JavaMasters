@@ -1,0 +1,349 @@
+package com.javarush.task.pro.task08.task0801;
+
+import static java.lang.Math.toRadians;
+
+/* 
+Утильный класс: часть 1
+*/
+
+public class Solution {
+
+    public static double sin(double a) {
+        return Math.sin(toRadians(a));
+    }
+
+    public static double cos(double a) {
+        return Math.cos(toRadians(a));
+    }
+
+    public static double tan(double a) {
+        return Math.tan(toRadians(a));
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0802;
+
+/* 
+Утильный класс: часть 2
+*/
+
+public class Solution {
+
+    public static double sqrt(double a) {
+        return Math.sqrt(a);
+    }
+
+    public static double cbrt(double a) {
+        return Math.cbrt(a);
+    }
+
+    public static double pow(int number, int power) {
+        return Math.pow(number, power);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0803;
+
+import java.util.Scanner;
+
+/* 
+Минимальный элемент массива
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int[] intArray = getArrayOfTenElements();
+        System.out.println(min(intArray));
+    }
+
+    public static int min(int[] ints) {
+        int min = ints[0];
+        for (int number : ints) {
+            min = Math.min(min, number);
+        }
+        return min;
+    }
+
+    public static int[] getArrayOfTenElements() {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] array = new int[10];
+        for (int i = 0; i < 10; i++) {
+            array[i] = scanner.nextInt();
+        }
+        return array;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0804;
+
+/* 
+Randomizer
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(generateNumber());
+    }
+
+    public static int generateNumber() {
+        return  (int) (Math.random() * 100);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0805;
+
+/* 
+Magic 8 ball
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println("Заработаю ли я себе на BMW?");
+        System.out.println(MagicBall.getPrediction());
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0806;
+
+/* 
+Импорты: Part 1
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        java.util.ArrayList<java.lang.String> arrayList = new java.util.ArrayList<>();
+        java.io.BufferedReader bufferedReader = new java.io.BufferedReader(new java.io.StringReader(""));
+        java.math.BigInteger bigInteger = new java.math.BigInteger("123");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0807;
+
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+/* 
+Импорты: Part 2
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        LinkedList<String> linkedList = new LinkedList<>();
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0808;
+
+/* 
+Обратный отсчет
+*/
+
+public class Solution {
+
+    public static void main(String[] args) throws InterruptedException {
+        countDown();
+    }
+
+    public static void countDown() throws InterruptedException {
+        System.out.println("3");
+        Thread.sleep(1000);
+        System.out.println("2");
+        Thread.sleep(1000);
+        System.out.println("1");
+        Thread.sleep(1000);
+        System.out.println("Старт!");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0809;
+
+/* 
+Counter
+*/
+
+public class Solution {
+
+    public static void main(String[] args) throws InterruptedException {
+        printNumbers();
+    }
+
+    public static void printNumbers() throws InterruptedException {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+            if (i < 10) {
+                Thread.sleep(1, 300_000);
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0810;
+
+import java.util.concurrent.TimeUnit;
+
+/* 
+Таймер
+*/
+
+public class Solution {
+
+    public static void setTimer(int days, int hours, int minutes, int seconds, int millis) throws InterruptedException {
+        System.out.println("Таймер запущен!");
+        TimeUnit.DAYS.sleep(days);
+        TimeUnit.HOURS.sleep(hours);
+        TimeUnit.MINUTES.sleep(minutes);
+        TimeUnit.SECONDS.sleep(seconds);
+        TimeUnit.MILLISECONDS.sleep(millis);
+        System.out.println("♬ ♪ ♬♬♬♬ ♪♪♪♪");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0811;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int x = 7;
+//        x = x & 25;
+        x = x & 5;
+//        x = x & 3;
+        x = x & 12;
+        x = x | 1;
+        System.out.println(x);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0812;
+
+/* 
+Swap по-новому
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Pair pair = new Pair(4, 5);
+        System.out.println(pair);
+        pair.swap();
+        System.out.println(pair);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0813;
+
+/* 
+Степень двойки
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getPowerOfTwo(6));
+    }
+
+    public static int getPowerOfTwo(int power) {
+        if (power >= 0) {
+            return 1 << power;
+        } else {
+            return 1 >> -power;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0814;
+
+/* 
+Флаги
+*/
+
+public class Solution {
+
+    public static int setFlag(int number, int flagPos) {
+        return number | (1 << flagPos);
+    }
+
+    public static int resetFlag(int number, int flagPos) {
+        return number & ~(1 << flagPos);
+    }
+
+    public static boolean checkFlag(int number, int flagPos) {
+        return (number & (1 << flagPos)) == (1 << flagPos);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0815;
+
+/* 
+Логические операторы
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        taskForCondition();
+    }
+
+    public static void taskForCondition() {
+        int number = 15;
+        boolean firstCondition = number < 15 & number > 25 & (number += 15) < 25;
+        boolean secondCondition = (number | 5) > 12 || (number = number + 2) > 40;
+        System.out.println(number);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0816;
+
+/* 
+Приоритеты
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int number = 2;
+        System.out.println(number + number * (number + ++number));
+    }
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task08.task0817;
+
+/* 
+Инкременты
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int a = 3;
+        int b = ++a + (a-- * ++a);
+
+        System.out.println(b);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

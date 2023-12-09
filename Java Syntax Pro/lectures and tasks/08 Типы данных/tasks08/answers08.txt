@@ -1,0 +1,339 @@
+package com.javarush.task.pro.task07.task0701;
+
+/* 
+Все возможные типы
+*/
+
+public class Solution {
+    byte a;
+    short b;
+    int c;
+    long d;
+    float e;
+    double f;
+    boolean g;
+    char i;
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0702;
+
+/* 
+Максимальное целое
+*/
+
+public class Solution {
+    byte a = Byte.MAX_VALUE;
+    short b = Short.MAX_VALUE;
+    int c = Integer.MAX_VALUE;
+    long d = Long.MAX_VALUE;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0703;
+
+/* 
+Минимальное целое
+*/
+
+public class Solution {
+    byte a = Byte.MIN_VALUE;
+    short b = Short.MIN_VALUE;
+    int c = Integer.MIN_VALUE;
+    long d = Long.MIN_VALUE;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0704;
+
+/* 
+Экспонентная запись числа
+*/
+
+public class Solution {
+    double earthDiameter = 1.2742E+4;
+    double lightSpeed = 2.99792458E+8;
+    double uraniumAtomicMass = 2.380289E+2;
+    double averageBeeWeight = 8.5E-2;
+    double javaDeveloperSalary = 1.E+4;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0705;
+
+/* 
+Бесконечность не предел
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        div( 0.0, 10);
+        div( 0.0, -10);
+    }
+
+    public static void div(double a, double b){
+        System.out.println(b/a);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0706;
+
+/* 
+Странное деление
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        div( 0.0, 0.0);
+    }
+
+    public static void div(double a, double b){
+        System.out.println(b/a);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0707;
+
+/* 
+5 оттенков char
+*/
+
+public class Solution {
+    public static char char1 = 101; //2
+    public static char char2 = 'H'; //1
+    public static char char3 = 114; //10
+    public static char char4 = '\u006F';//5
+    public static char char5 = 108; // 3
+    public static char char6 = 'h';//8
+    public static char char7 = 0x0063; //7
+    public static char char8 = ' ';//6
+    public static char char9 = 'l'; //4
+    public static char char10 = 0x61; //9
+
+    public static void main(String[] args) {
+        System.out.print(char2);
+        System.out.print(char1);
+        System.out.print(char5);
+        System.out.print(char9);
+        System.out.print(char4);
+        System.out.print(char8);
+        System.out.print(char7);
+        System.out.print(char6);
+        System.out.print(char10);
+        System.out.print(char3);
+        System.out.println();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0708;
+
+/* 
+Правильные типы
+*/
+
+public class Solution {
+    public static byte a;
+    public static short b;
+    public static int c;
+    public static long d;
+
+    public static void main(String[] args) {
+        setValues(100);
+    }
+
+    public static void setValues(long value) {
+        a = (byte) value;
+        b = (short) value;
+        c = (int) value;
+        d = value;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0709;
+
+/* 
+Очень правильные типы
+*/
+
+public class Solution {
+    long a = 109 + 15;
+    int b = (int)a * 2;
+    short c = (short)(a / b);
+    byte d = (byte)(a + b - c);
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0710;
+
+import java.util.Arrays;
+
+/* 
+Массив значений
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Integer[] array = new Integer[5];
+        fillArray(array, 3);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static void fillArray(Integer[] array, int value){
+        for (int i = 0; i < array.length; i++) {
+            array[i] = value;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0711;
+
+import java.util.Arrays;
+
+/* 
+Гибкое заполнение массива
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Integer[] array = new Integer[5];
+        fillArray(array, 3, 1, 3);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static void fillArray(Integer[] array, int value, int begin, int end) {
+        for (int i = begin; i < end; i++) {
+            array[i] = value;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0712;
+
+import java.util.Scanner;
+
+/* 
+Первые объекты
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String s1 = new String();
+        String s2 = new String();
+        String s3 = new String();
+        String s4 = new String();
+        String s5 = new String();
+        String s6 = new String();
+        String s7 = new String();
+        String s8 = new String();
+        String s9 = new String();
+        String s10 = new String();
+        int [] a1 = new int[0];
+        int [] a2 = new int[0];
+        int [] a3 = new int[0];
+        int [] a4 = new int[0];
+        int [] a5 = new int[0];
+        Scanner scanner1 = new Scanner("");
+        Scanner scanner2 = new Scanner("");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0713;
+
+public class Human extends Terran{
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0713;
+
+/* 
+Простое наследование
+*/
+
+public class Terran {
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0713;
+
+public class Woman extends Human{
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0714;
+
+/* 
+Наследование переменных
+*/
+
+public class Car extends Vehicle{
+    int wheelCount;
+    double weight;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0714;
+
+/* 
+Наследование переменных
+*/
+
+public class Vehicle {
+    double maxSpeed;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0714;
+
+/* 
+Наследование переменных
+*/
+
+public class ElectricCar extends Car{
+    int electricEnginePower;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0715;
+
+public class JavaDeveloper extends Human{
+    public void code(){
+        System.out.println("Я умею общаться на Java.");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0715;
+
+public class Human extends Entity {
+    public void speak(){
+        System.out.println("Я умею общаться.");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task07.task0715;
+
+/* 
+Наследование методов
+*/
+
+public class Entity {
+    public void move(){
+        System.out.println("Я передвигаюсь.");
+    }
+
+    public void eat(){
+        System.out.println("Я ем.");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

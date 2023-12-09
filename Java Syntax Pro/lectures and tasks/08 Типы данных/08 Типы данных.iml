@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Бесконечность не предел" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0705" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Все возможные типы" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0701" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Гибкое заполнение массива" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0711" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Максимальное целое" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0702" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Массив значений" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0710" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Минимальное целое" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0703" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Наследование методов" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0715" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Наследование переменных" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0714" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Очень правильные типы" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0709" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Первые объекты" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0712" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Правильные типы" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0708" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Простое наследование" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0713" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Странное деление" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0706" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/Экспонентная запись числа" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0704" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks08/оттенков char" isTestSource="false" packagePrefix="com.javarush.task.pro.task07.task0707" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

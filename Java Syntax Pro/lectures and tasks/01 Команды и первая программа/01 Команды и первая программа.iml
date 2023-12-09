@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/task01/2 + 3 = 5" isTestSource="false" packagePrefix="com.javarush.task.task01.task0108" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/«Я по объявлению…»" isTestSource="false" packagePrefix="com.javarush.task.task01.task0109" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Амиго очень умный" isTestSource="false" packagePrefix="com.javarush.task.task01.task0142" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Комментарии излишни" isTestSource="false" packagePrefix="com.javarush.task.task01.task0107" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Мой юный друг" isTestSource="false" packagePrefix="com.javarush.task.task01.task0103" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Ну это… С новым годом!" isTestSource="false" packagePrefix="com.javarush.task.task01.task0115" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Объявляем переменные" isTestSource="false" packagePrefix="com.javarush.task.task01.task0105" />
+      <sourceFolder url="file://$MODULE_DIR$/task01/Я думаю, быть программистом круто" isTestSource="false" packagePrefix="com.javarush.task.task01.task0101" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

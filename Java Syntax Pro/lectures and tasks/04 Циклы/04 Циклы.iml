@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Share a Coke" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0416" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Все любят Мамбу" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0402" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Второе минимальное число из введенных" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0410" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Заполненный прямоугольник" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0404" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Максимум из введенных чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0408" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Минимум из введенных чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0409" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Незаполненный прямоугольник" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0405" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Площадь круга" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0415" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Показываем, что получаем" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0406" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Рисуем треугольник" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0413" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Скорость ветра" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0417" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Стакан наполовину пуст или наполовину полон" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0418" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Сумма кратных чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0412" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Сумма чисел, не кратных 3" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0407" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Суммирование" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0403" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Хорошего не бывает много" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0414" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Четные числа" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0411" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks04/Я никогда не буду работать за копейки" isTestSource="false" packagePrefix="com.javarush.task.pro.task04.task0401" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

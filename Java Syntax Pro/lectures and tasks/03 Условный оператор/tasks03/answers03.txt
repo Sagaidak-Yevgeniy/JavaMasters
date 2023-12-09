@@ -1,0 +1,343 @@
+package com.javarush.task.pro.task03.task0301;
+
+import java.util.Scanner;
+
+/* 
+Тепло или холодно
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String cold = "на улице холодно";
+        String warm = "на улице тепло";
+        Scanner scanner = new Scanner(System.in);
+        int temperature = scanner.nextInt();
+        if (temperature < 0) {
+            System.out.println(cold);
+        } else {
+            System.out.println(warm);
+        }
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0302;
+
+import java.util.Scanner;
+
+/* 
+Призывная кампания
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String militaryCommissar = ", явитесь в военкомат";
+
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        int age = scanner.nextInt();
+        if (age >= 18) {
+            if (age <= 28) {
+                System.out.println(name + militaryCommissar);
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0303;
+
+import java.util.Scanner;
+
+/* 
+Школа или институт
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int age = scanner.nextInt();
+        if (age < 18) {
+            if (age > 5) {
+                System.out.println("нужно ходить в школу");
+            }
+        } else {
+            System.out.println("пора в институт");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0304;
+
+import java.util.Scanner;
+
+/* 
+Измерим температуру тела
+*/
+
+public class Solution {
+    private static boolean isHigh;
+    private static boolean isLow;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double bodyTemperature = scanner.nextDouble();
+        isHigh = bodyTemperature > 37;
+        isLow = bodyTemperature < 36;
+        if (isHigh) {
+            System.out.println("температура тела высокая");
+        } else if (isLow) {
+            System.out.println("температура тела низкая");
+        } else {
+            System.out.println("температура тела нормальная");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0305;
+
+import java.util.Scanner;
+
+/* 
+Три числа
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+        int number3 = scanner.nextInt();
+
+        if (number1 == number2) {
+            if (number1 == number3) {
+                System.out.println(number1 + " " + number2 + " " + number3);
+            } else {
+                System.out.println(number1 + " " + number2);
+            }
+        } else if (number1 == number3) {
+            System.out.println(number1 + " " + number3);
+        } else if (number2 == number3) {
+            System.out.println(number2 + " " + number3);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0306;
+
+import java.util.Scanner;
+
+/* 
+Треугольник
+*/
+
+public class Solution {
+    private static final String TRIANGLE_EXISTS = "треугольник существует";
+    private static final String TRIANGLE_NOT_EXISTS = "треугольник не существует";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sideA = scanner.nextInt();
+        int sideB = scanner.nextInt();
+        int sideC = scanner.nextInt();
+
+        if ((sideA < sideB + sideC) && (sideB < sideC + sideA) && (sideC < sideA + sideB)) {
+            System.out.println(TRIANGLE_EXISTS);
+        } else {
+            System.out.println(TRIANGLE_NOT_EXISTS);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0307;
+
+import java.util.Scanner;
+
+/* 
+Работать или не работать - вот в чем вопрос
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int age = scanner.nextInt();
+        if (age < 20 || age > 60) {
+            System.out.println("можно не работать");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0308;
+
+import java.util.Scanner;
+
+/* 
+Координатные четверти
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        if (x > 0 && y > 0) {
+            System.out.println(1);
+        } else if (x < 0 && y > 0) {
+            System.out.println(2);
+        } else if (x < 0 && y < 0) {
+            System.out.println(3);
+        } else if (x > 0 && y < 0) {
+            System.out.println(4);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0309;
+
+import java.util.Scanner;
+
+/* 
+Ищем максимум
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numberA = scanner.nextInt();
+        int numberB = scanner.nextInt();
+        System.out.println(numberA > numberB ? numberA : numberB);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0310;
+
+import java.util.Scanner;
+
+/* 
+Через тернии...
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        if (number < 5) {
+            System.out.println("число меньше 5");
+        } else if (number > 5) {
+            System.out.println("число больше 5");
+        } else {
+            System.out.println("число равно 5");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0311;
+
+import java.util.Scanner;
+
+/* 
+Высокая точность
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double firstDouble = scanner.nextDouble();
+        double secondDouble = scanner.nextDouble();
+
+        if (Math.abs(secondDouble - firstDouble) < 0.000001) {
+            System.out.println("числа равны");
+        } else {
+            System.out.println("числа не равны");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0312;
+
+import java.util.Scanner;
+
+/* 
+Сравним строки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string1 = scanner.nextLine();
+        String string2 = scanner.nextLine();
+
+        if (string1.equals(string2)) {
+            System.out.println("строки одинаковые");
+        } else {
+            System.out.println("строки разные");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0313;
+
+public class Solution {
+    public static String string1 = "Амиго";
+    public static String string2 = string1;
+    public static String string3 = new String(string1);
+
+    public static void main(String[] args) {
+        String same = "ссылки на строки одинаковые";
+        String different = "ссылки на строки разные";
+        if (string1 == string2) {
+            System.out.println(same);
+        } else {
+            System.out.println(different);
+        }
+
+        if (string2 == string3) {
+            System.out.println(same);
+        } else {
+            System.out.println(different);
+        }
+
+        if (string1 == string3) {
+            System.out.println(same);
+        } else {
+            System.out.println(different);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task03.task0314;
+
+import java.util.Scanner;
+
+/* 
+Сломанная клавиатура
+*/
+
+public class Solution {
+    public static String secret = "AmIGo";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        if (secret.equalsIgnoreCase(string)) {
+            System.out.println("доступ разрешен");
+        } else {
+            System.out.println("доступ запрещен");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

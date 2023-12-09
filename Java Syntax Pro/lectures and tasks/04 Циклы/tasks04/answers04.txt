@@ -1,0 +1,414 @@
+package com.javarush.task.pro.task04.task0401;
+
+/* 
+Я никогда не буду работать за копейки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String quote = "Я никогда не буду работать за копейки. Амиго";
+        int i = 1;
+        while (i <= 100) {
+            System.out.println(quote);
+            i++;
+        }
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0402;
+
+import java.util.Scanner;
+
+/* 
+Все любят Мамбу
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String text = " любит меня.";
+
+        Scanner scanner = new Scanner(System.in);
+        String result = scanner.nextLine() + text;
+        int i = 1;
+        while (i <= 10) {
+            System.out.println(result);
+            i++;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0403;
+
+import java.util.Scanner;
+
+/* 
+Суммирование
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int sum = 0;
+        boolean isExit = false;
+        while (!isExit) {
+            if (scanner.hasNextInt()) {
+                int number = scanner.nextInt();
+                sum = sum + number;
+            } else if (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (line.equals("ENTER")) {
+                    isExit = true;
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0404;
+
+/* 
+Заполненный прямоугольник
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int height = 0;
+        while (height < 5) {
+            int width = 0;
+            while (width < 10) {
+                System.out.print('Q');
+                width++;
+            }
+            System.out.println();
+            height++;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0405;
+
+/* 
+Незаполненный прямоугольник
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int height = 1;
+        while (height <= 10) {
+            int width = 1;
+            while (width <= 20) {
+                if (height == 1 || height == 10) {
+                    System.out.print('Б');
+                } else if (width == 1 || width == 20) {
+                    System.out.print('Б');
+                } else {
+                    System.out.print(' ');
+                }
+                width++;
+            }
+            System.out.println();
+            height++;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0406;
+
+import java.util.Scanner;
+
+/* 
+Показываем, что получаем
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        while (true) {
+            String s = console.nextLine();
+            if (s.equals("enough")) {
+                break;
+            }
+            System.out.println(s);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0407;
+
+/* 
+Сумма чисел, не кратных 3
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int sum = 0;
+        int number = 0;
+        while (number <= 100) {
+            if (number % 3 == 0) {
+                number++;
+                continue;
+            }
+            sum = sum + number;
+            number++;
+        }
+        System.out.println(sum);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0409;
+
+import java.util.Scanner;
+
+/* 
+Минимум из введенных чисел
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int min = Integer.MAX_VALUE;
+        while (console.hasNextInt()) {
+            int x = console.nextInt();
+            if (x < min) {
+                min = x;
+            }
+        }
+        System.out.println(min);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0408;
+
+import java.util.Scanner;
+
+/* 
+Максимум из введенных чисел
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int max = Integer.MIN_VALUE;
+        while (console.hasNextInt()) {
+            int x = console.nextInt();
+            if (x % 2 == 0 && x > max) {
+                max = x;
+            }
+        }
+        System.out.println(max);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0410;
+
+import java.util.Scanner;
+
+/* 
+Второе минимальное число из введенных
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+
+        while (console.hasNextInt()) {
+            int tmp = console.nextInt();
+            if (tmp < min) {
+                secondMin = min;
+                min = tmp;
+            } else if (tmp > min && tmp < secondMin) {
+                secondMin = tmp;
+            }
+        }
+
+        System.out.println(secondMin);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0411;
+
+/* 
+Четные числа
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        for (int i = 2; i < 15; i = i + 2) {
+            System.out.println(i);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0412;
+
+import java.util.Scanner;
+
+/* 
+Сумма кратных чисел
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int start = scanner.nextInt();
+        int end = scanner.nextInt();
+        int multiple = scanner.nextInt();
+
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+            if (i % multiple != 0) {
+                continue;
+            }
+            sum = sum + i;
+        }
+        System.out.println(sum);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0413;
+
+/* 
+Рисуем треугольник
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print('8');
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0414;
+
+import java.util.Scanner;
+
+/* 
+Хорошего не бывает много
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        int number = scanner.nextInt();
+
+        do {
+            System.out.println(string);
+            number--;
+        } while (number > 0 && number < 4);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0415;
+
+import java.util.Scanner;
+
+/* 
+Площадь круга
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int radius = scanner.nextInt();
+
+        double pi = 3.14;
+        int square = (int) (pi * radius * radius);
+
+        System.out.println(square);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0416;
+
+import java.util.Scanner;
+
+/* 
+Share a Coke
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int firstNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
+
+        double result = firstNumber * 1. / secondNumber;
+        System.out.println(result);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0417;
+
+import java.util.Scanner;
+
+/* 
+Скорость ветра
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double speedInMetersPerSecond = scanner.nextInt();
+        int speedInKilometersPerHour = (int) Math.round(speedInMetersPerSecond * 3.6);
+        System.out.println(speedInKilometersPerHour);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task04.task0418;
+
+import java.util.Scanner;
+
+/* 
+Стакан наполовину пуст или наполовину полон?
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        double glass = 0.5;
+
+        Scanner scanner = new Scanner(System.in);
+        boolean isOptimist = scanner.nextBoolean();
+        int result;
+        if (isOptimist) {
+            result = (int) Math.ceil(glass);
+        } else {
+            result = (int) Math.floor(glass);
+        }
+        System.out.println(result);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

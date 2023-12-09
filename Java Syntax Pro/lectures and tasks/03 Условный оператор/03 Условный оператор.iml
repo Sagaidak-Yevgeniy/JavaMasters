@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Высокая точность" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0311" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Измерим температуру тела" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0304" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Ищем максимум" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0309" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Координатные четверти" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0308" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Призывная кампания" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0302" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Работать или не работать - вот в чем вопрос" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0307" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Сломанная клавиатура" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0314" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Сравнение строк по ссылке" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0313" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Сравним строки" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0312" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Тепло или холодно" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0301" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Треугольник" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0306" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Три числа" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0305" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Через тернии" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0310" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks03/Школа или институт" isTestSource="false" packagePrefix="com.javarush.task.pro.task03.task0303" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

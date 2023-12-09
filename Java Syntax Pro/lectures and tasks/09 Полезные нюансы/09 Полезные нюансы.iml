@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Counter" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0809" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Magic 8 ball" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0805" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Randomizer" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0804" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Swap по-новому" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0812" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Импорты Part 1" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0806" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Импорты Part 2" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0807" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Инкременты" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0817" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Логические операторы" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0815" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Минимальный элемент массива" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0803" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Обратный отсчет" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0808" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Побитовые операции" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0811" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Приоритеты" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0816" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Степень двойки" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0813" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Таймер" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0810" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Утильный класс часть 1" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0801" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Утильный класс часть 2" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0802" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks09/Флаги" isTestSource="false" packagePrefix="com.javarush.task.pro.task08.task0814" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

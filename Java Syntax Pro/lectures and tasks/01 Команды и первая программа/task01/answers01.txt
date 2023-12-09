@@ -1,0 +1,153 @@
+package com.javarush.task.task01.task0142;
+
+/* 
+Амиго очень умный
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        // выводим фразу "Амиго очень умный" на экран, кавычки выведены не будут
+        System.out.print("Амиго очень умный");
+    }
+}
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0101;
+
+/* 
+Я думаю, быть программистом круто
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        // выводим фразу "Я думаю, быть программистом круто" на экран,
+        // кавычки выведены не будут
+        System.out.print("Я думаю, быть программистом круто");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0105;
+
+/* 
+Объявляем переменные
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        // объявляем (создаем) переменную name типа String
+        String name;
+        // объявляем (создаем) переменную age типа int
+        int age;
+        // объявляем (создаем) переменную city типа String
+        String city;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0109;
+
+/* 
+«Я по объявлению…»
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        // объявляем переменную a типа int и сразу же в строке объявления
+        // присваиваем ей значение
+        int a = 10;
+        // объявляем переменную b типа int и сразу же в строке объявления
+        // присваиваем ей значение, отличное от значения переменной a
+        int b = 5;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0103;
+
+/* 
+Мой юный друг
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        // так как друг родился 8 лет назад, а сейчас 3126 год, то год рождения
+        // друга можем получить путем вычитания: 3126-8
+        System.out.println(3126 - 8);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0115;
+
+/* 
+Ну это… С новым годом!
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+//        String s = "Merry";
+//        System.out.println("Christmas");
+//        System.out.println("Merry New");
+//        System.out.println("weekend");
+        System.out.print("Happy New");
+//        System.out.println("weekend");
+//        System.out.println(s);
+//        System.out.print("Merry New!");
+        System.out.print(" ");
+        System.out.println("Year");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0107;
+
+/* 
+Комментарии излишни
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int x = 2;
+        int y = 12;
+
+        //y = x * y;
+        y = x + y;
+
+        x = y - x;
+        y = y - x;
+
+        System.out.println(x);
+        System.out.println(y);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.task01.task0108;
+
+/* 
+2 + 3 = 5
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int a = 3;
+        int b = 2;
+
+//        System.out.print("два");
+        System.out.print(b);
+        System.out.print(" плюс ");
+//        System.out.print(" минус ");
+        System.out.print(a);
+//        System.out.print("три");
+        System.out.print(" равно ");
+//        System.out.print(" будет ");
+//        System.out.print("пять");
+        System.out.print(a + b);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

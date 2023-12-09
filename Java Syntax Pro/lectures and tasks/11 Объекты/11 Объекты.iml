@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Автопроизводитель" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1021" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Геттер и сеттер в деле" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1018" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Два айфона" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1010" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Дефрагментация памяти" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1012" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Ежик и яблоко" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1015" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Жажда скорости" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1004" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Зарплата" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1008" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Кто тут наследник" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1006" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Купи 10 батонов" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1014" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Многосерийный предприниматель" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1005" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Построим новый бизнес-комплекс JavaRush Business Center" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1003" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Построим новый жилой комплекс JavaRush Towers" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1002" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Прогноз погоды" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1016" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Расставь правильно этажи" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1013" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/С крышей или без Вот в чем вопрос" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1007" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Собираем компьютер" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1020" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Создадим небоскреб" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1001" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Создаем свой hashCode" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1011" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Создание материков" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1017" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Сравнение строк" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1009" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks11/Текущий год" isTestSource="false" packagePrefix="com.javarush.task.pro.task10.task1019" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

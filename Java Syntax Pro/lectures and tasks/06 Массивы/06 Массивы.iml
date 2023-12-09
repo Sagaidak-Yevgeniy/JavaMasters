@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Reverse" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0505" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Выводим двумерные массивы" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0514" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Выводим массивы" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0513" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Делим массив" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0517" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Есть ли кто" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0519" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Заполняем массив" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0516" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Максимальное из N чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0507" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Минимальное из N чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0506" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Объединяем массивы" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0504" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Работаем с элементами массива" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0503" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Создаем двумерный массив" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0511" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Создаем массивы" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0501" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Создаем мультимассив" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0512" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Сортировка массива" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0518" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Сравнение двумерных массивов" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0515" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Таблица умножения" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0509" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Треугольный массив" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0510" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Удаляем одинаковые строки" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0508" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks06/Четные и нечетные ячейки массива" isTestSource="false" packagePrefix="com.javarush.task.pro.task05.task0502" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

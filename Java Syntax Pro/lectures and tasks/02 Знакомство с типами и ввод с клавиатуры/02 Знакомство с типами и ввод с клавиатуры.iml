@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/9-ка это перевернутая 6-ка" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0204" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/«Я по объявлению…»" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0201" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/«Я снова по объявлению…»" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0206" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Когда-то было 32 зуба" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0205" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Конкатенация строк и чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0209" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Логотип решает все" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0207" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Полнометражная картина" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0202" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Получение длины строки" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0211" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Попрошу регистр на меня не повышать!" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0212" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Последняя цифра числа" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0203" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Причешем резюме" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0213" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Пустота и пробелы" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0208" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/С каждым разом огромнее" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0210" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Чтение и преобразование строк" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0214" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks02/Чтение чисел" isTestSource="false" packagePrefix="com.javarush.task.pro.task02.task0215" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

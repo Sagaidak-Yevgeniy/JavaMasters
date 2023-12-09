@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/String pool" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0917" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/String.format()" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0916" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/StringTokenizer" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0915" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Восьмеричный конвертер" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0905" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Двоично-шестнадцатеричный конвертер" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0908" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Двоичный конвертер" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0906" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Кодировка Unicode" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0910" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Литералы с плавающей точкой" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0902" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Обновление пути" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0914" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Поздравление" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0911" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Поиск в строке" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0913" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Поработаем со StringBuilder" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0918" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Проверка URL-адреса" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0912" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Разворот строки" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0919" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Символьные литералы" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0904" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Строковые литералы" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0903" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Целочисленные литералы" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0901" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Шестнадцатеричный конвертер" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0907" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks10/Экранирование символов" isTestSource="false" packagePrefix="com.javarush.task.pro.task09.task0909" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

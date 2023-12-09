@@ -1,0 +1,604 @@
+package com.javarush.task.pro.task09.task0901;
+
+/* 
+Целочисленные литералы
+*/
+
+public class Solution {
+    public byte b = -128;
+    public short s = -32768;
+    public int i = 1_234_567_890;
+    public long l = 2_345_678_900L;
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0902;
+
+/* 
+Литералы с плавающей точкой
+*/
+
+public class Solution {
+    public double a = 0.;
+    public double b = .0;
+    public double c = 100D;
+    public double d = 100.0;
+    public double e = 1.11E5;
+    public float f = 200F;
+    public float g = 0.F;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0903;
+
+/* 
+Строковые литералы
+*/
+
+public class Solution {
+    public String text = "Всегда пишите код так, " +
+            "будто сопровождать его будет " +
+            "склонный к насилию психопат, " +
+            "который знает, где вы живете. " +
+            "Martin Golding";
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0904;
+
+/* 
+Символьные литералы
+*/
+
+public class Solution {
+    public static char first = '\u004A';
+    public static char second = 'a';
+    public static char third = '\u0076';
+    public static char fourth = 'a';
+
+    public static void main(String[] args) {
+        System.out.print(first);
+        System.out.print(second);
+        System.out.print(third);
+        System.out.print(fourth);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0905;
+
+/* 
+Восьмеричный конвертер
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int decimalNumber = 21;
+        System.out.println("Десятичное число " + decimalNumber + " равно восьмеричному числу " + toOctal(decimalNumber));
+        int octalNumber = 25;
+        System.out.println("Восьмеричное число " + octalNumber + " равно десятичному числу " + toDecimal(octalNumber));
+    }
+
+    public static int toOctal(int decimalNumber) {
+        int octalNumber = 0;
+        if (decimalNumber <= 0) {
+            return octalNumber;
+        }
+
+        int i = 0;
+        while (decimalNumber != 0) {
+            octalNumber = (int) (octalNumber + (decimalNumber % 8) * Math.pow(10, i++));
+            decimalNumber = decimalNumber / 8;
+        }
+        return octalNumber;
+    }
+
+    public static int toDecimal(int octalNumber) {
+        int decimalNumber = 0;
+        if (octalNumber <= 0) {
+            return decimalNumber;
+        }
+
+        int i = 0;
+        while (octalNumber != 0) {
+            decimalNumber = (int) (decimalNumber + (octalNumber % 10) * Math.pow(8, i++));
+            octalNumber = octalNumber / 10;
+        }
+        return decimalNumber;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0906;
+
+/* 
+Двоичный конвертер
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int decimalNumber = Integer.MAX_VALUE;
+        System.out.println("Десятичное число " + decimalNumber + " равно двоичному числу " + toBinary(decimalNumber));
+        String binaryNumber = "1111111111111111111111111111111";
+        System.out.println("Двоичное число " + binaryNumber + " равно десятичному числу " + toDecimal(binaryNumber));
+    }
+
+    public static String toBinary(int decimalNumber) {
+        String binaryNumber = "";
+        if (decimalNumber <= 0) {
+            return binaryNumber;
+        }
+
+        while (decimalNumber != 0) {
+            binaryNumber = decimalNumber % 2 + binaryNumber;
+            decimalNumber = decimalNumber / 2;
+        }
+        return binaryNumber;
+    }
+
+    public static int toDecimal(String binaryNumber) {
+        int decimalNumber = 0;
+        if (binaryNumber == null) {
+            return decimalNumber;
+        }
+
+        for (int i = 0; i < binaryNumber.length(); i++) {
+            int index = binaryNumber.length() - 1 - i;
+            int value = Character.getNumericValue(binaryNumber.charAt(index));
+            decimalNumber += value * Math.pow(2, i);
+        }
+        return decimalNumber;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0907;
+
+/* 
+Шестнадцатеричный конвертер
+*/
+
+public class Solution {
+    private static final String HEX = "0123456789abcdef";
+
+    public static void main(String[] args) {
+        int decimalNumber = 1256;
+        System.out.println("Десятичное число " + decimalNumber + " равно шестнадцатеричному числу " + toHex(decimalNumber));
+        String hexNumber = "4e8";
+        System.out.println("Шестнадцатеричное число " + hexNumber + " равно десятичному числу " + toDecimal(hexNumber));
+    }
+
+    public static String toHex(int decimalNumber) {
+        String hexNumber = "";
+        if (decimalNumber <= 0) {
+            return hexNumber;
+        }
+
+        while (decimalNumber != 0) {
+            hexNumber = HEX.charAt(decimalNumber % 16) + hexNumber;
+            decimalNumber = decimalNumber / 16;
+        }
+        return hexNumber;
+    }
+
+    public static int toDecimal(String hexNumber) {
+        int decimalNumber = 0;
+        if (hexNumber == null) {
+            return decimalNumber;
+        }
+
+        for (int i = 0; i < hexNumber.length(); i++) {
+            decimalNumber = 16 * decimalNumber + HEX.indexOf(hexNumber.charAt(i));
+        }
+        return decimalNumber;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0908;
+
+import java.util.regex.Pattern;
+
+/* 
+Двоично-шестнадцатеричный конвертер
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String binaryNumber = "100111010000";
+        System.out.println("Двоичное число " + binaryNumber + " равно шестнадцатеричному числу " + toHex(binaryNumber));
+        String hexNumber = "9d0";
+        System.out.println("Шестнадцатеричное число " + hexNumber + " равно двоичному числу " + toBinary(hexNumber));
+    }
+
+    public static String toHex(String binaryNumber) {
+        String hexNumber = "";
+        if (binaryNumber == null) {
+            return hexNumber;
+        }
+
+        StringBuilder temp = new StringBuilder();
+        if (binaryNumber.length() % 4 == 1) {
+            temp.append("000").append(binaryNumber);
+        } else if (binaryNumber.length() % 4 == 2) {
+            temp.append("00").append(binaryNumber);
+        } else if (binaryNumber.length() % 4 == 3) {
+            temp.append("0").append(binaryNumber);
+        } else {
+            temp.append(binaryNumber);
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < temp.length(); i += 4) {
+            String substring = temp.substring(i, i + 4);
+            String element;
+            if (substring.equals("0000")) {
+                element = "0";
+            } else if (substring.equals("0001")) {
+                element = "1";
+            } else if (substring.equals("0010")) {
+                element = "2";
+            } else if (substring.equals("0011")) {
+                element = "3";
+            } else if (substring.equals("0100")) {
+                element = "4";
+            } else if (substring.equals("0101")) {
+                element = "5";
+            } else if (substring.equals("0110")) {
+                element = "6";
+            } else if (substring.equals("0111")) {
+                element = "7";
+            } else if (substring.equals("1000")) {
+                element = "8";
+            } else if (substring.equals("1001")) {
+                element = "9";
+            } else if (substring.equals("1010")) {
+                element = "a";
+            } else if (substring.equals("1011")) {
+                element = "b";
+            } else if (substring.equals("1100")) {
+                element = "c";
+            } else if (substring.equals("1101")) {
+                element = "d";
+            } else if (substring.equals("1110")) {
+                element = "e";
+            } else if (substring.equals("1111")) {
+                element = "f";
+            } else {
+                result.setLength(0);
+                break;
+            }
+            result.append(element);
+        }
+        return result.toString();
+    }
+
+    public static String toBinary(String hexNumber) {
+        String binaryNumber = "";
+        if (hexNumber == null) {
+            return binaryNumber;
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < hexNumber.length(); i++) {
+            String element;
+            if(hexNumber.charAt(i) == '0') {
+                element = "0000";
+            } else if (hexNumber.charAt(i) == '1') {
+                element = "0001";
+            } else if (hexNumber.charAt(i) == '2') {
+                element = "0010";
+            } else if (hexNumber.charAt(i) == '3') {
+                element = "0011";
+            } else if (hexNumber.charAt(i) == '4') {
+                element = "0100";
+            } else if (hexNumber.charAt(i) == '5') {
+                element = "0101";
+            } else if (hexNumber.charAt(i) == '6') {
+                element = "0110";
+            } else if (hexNumber.charAt(i) == '7') {
+                element = "0111";
+            } else if (hexNumber.charAt(i) == '8') {
+                element = "1000";
+            } else if (hexNumber.charAt(i) == '9') {
+                element = "1001";
+            } else if (hexNumber.charAt(i) == 'a') {
+                element = "1010";
+            } else if (hexNumber.charAt(i) == 'b') {
+                element = "1011";
+            } else if (hexNumber.charAt(i) == 'c') {
+                element = "1100";
+            } else if (hexNumber.charAt(i) == 'd') {
+                element = "1101";
+            } else if (hexNumber.charAt(i) == 'e') {
+                element = "1110";
+            } else if (hexNumber.charAt(i) == 'f') {
+                element = "1111";
+            } else {
+                result.setLength(0);
+                break;
+            }
+            result.append(element);
+        }
+        return result.toString();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0909;
+
+/* 
+Экранирование символов
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("It's a Windows path: \"C:\\Program Files\\Java\\jdk-13.0.0\\bin\"");
+        System.out.println("It's a Java string: \\\"C:\\\\Program Files\\\\Java\\\\jdk-13.0.0\\\\bin\\\"");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0910;
+
+/* 
+Кодировка Unicode
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        char[] symbols = new char[9];
+        init(symbols);
+        System.out.println(new String(symbols));
+    }
+
+    public static void init(char[] symbols) {
+        symbols[0] = '\u00A9';
+        symbols[1] = '\u004A';
+        symbols[2] = '\u0061';
+        symbols[3] = '\u0076';
+        symbols[4] = '\u0061';
+        symbols[5] = '\u0052';
+        symbols[6] = '\u0075';
+        symbols[7] = '\u0073';
+        symbols[8] = '\u0068';
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0911;
+
+/* 
+Поздравление
+*/
+
+public class Solution {
+    public static String partyFace = "\uD83E\uDD73";
+    public static String balloon = "\uD83C\uDF88";
+    public static String gift = "\uD83C\uDF81";
+    public static String partyPopper = "\uD83C\uDF89";
+    public static String cake = "\uD83C\uDF82";
+
+    public static void main(String[] args) {
+        printCongratulation();
+    }
+
+    public static void printCongratulation() {
+        String happyBirthday = "С днем рождения!";
+        String congratulation = partyFace + balloon + partyPopper + cake + gift;
+        System.out.println(happyBirthday + congratulation);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0912;
+
+/* 
+Проверка URL-адреса
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String[] urls = {"https://javarush.ru", "https://google.com", "http://wikipedia.org", "facebook.com", "https://instagram", "codegym.cc"};
+        for (String url : urls) {
+            String protocol = checkProtocol(url);
+            String domain = checkDomain(url);
+
+            System.out.println("У URL-адреса - " + url + ", сетевой протокол - " + protocol + ", домен - " + domain);
+        }
+    }
+
+    public static String checkProtocol(String url) {
+        if (url.startsWith("https")) {
+            return "https";
+        } else if (url.startsWith("http")) {
+            return "http";
+        } else {
+            return "неизвестный";
+        }
+    }
+
+    public static String checkDomain(String url) {
+        if (url.endsWith("com")) {
+            return "com";
+        } else if (url.endsWith("net")) {
+            return "net";
+        } else if (url.endsWith("org")) {
+            return "org";
+        } else if (url.endsWith("ru")) {
+            return "ru";
+        } else {
+            return "неизвестный";
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0913;
+
+/* 
+Поиск в строке
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Чтобы стать программистом, нужно писать код. Чтобы писать код, нужно учиться. Чтобы учиться, нужно желание.";
+        String word = "код";
+        int indexFromFirstWord = getIndexFromFirstWord(string, word);
+        int indexFromLastWord = getIndexFromLastWord(string, word);
+        System.out.println("Индекс первого символа первого слова \"" + word + "\" равен - " + indexFromFirstWord);
+        System.out.println("Индекс первого символа последнего слова \"" + word + "\" равен - " + indexFromLastWord);
+    }
+
+    public static int getIndexFromFirstWord(String string, String word) {
+        return string.indexOf(word);
+    }
+
+    public static int getIndexFromLastWord(String string, String word) {
+        return string.lastIndexOf(word);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0914;
+
+/* 
+Обновление пути
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String path = "/usr/java/jdk1.8/bin/";
+
+        String jdk13 = "jdk-13";
+        System.out.println(changePath(path, jdk13));
+    }
+
+    public static String changePath(String path, String jdk) {
+        int firstIndex = path.indexOf("jdk");
+        int lastIndex = path.indexOf("/", firstIndex);
+        String oldJdk = path.substring(firstIndex, lastIndex);
+
+        return path.replace(oldJdk, jdk);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0915;
+
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+/* 
+StringTokenizer
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String packagePath = "java.util.stream";
+        String[] tokens = getTokens(packagePath, "\\.");
+        System.out.println(Arrays.toString(tokens));
+    }
+
+    public static String[] getTokens(String query, String delimiter) {
+        StringTokenizer stringTokenizer = new StringTokenizer(query, delimiter);
+        String[] result = new String[stringTokenizer.countTokens()];
+        int i = 0;
+        while (stringTokenizer.hasMoreTokens()) {
+            result[i++] = stringTokenizer.nextToken();
+        }
+        return result;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0916;
+
+/* 
+String.format()
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println(format("Амиго", 5000));
+    }
+
+    public static String format(String name, int salary) {
+        String phrase = "Меня зовут %s. Я буду зарабатывать $%d в месяц.";
+        return String.format(phrase, name, salary);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0917;
+
+/* 
+String pool
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String first = new String("JavaRush");
+        String second = new String("JavaRush");
+        String third = new String("javarush");
+        System.out.println(equal(first, second));
+        System.out.println(equal(second, third));
+    }
+
+    public static boolean equal(String first, String second) {
+        return first.intern() == second.intern();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0918;
+
+/* 
+Поработаем со StringBuilder
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Учиться, учиться и еще раз учиться! ";
+
+        System.out.println(addTo(string, new String[]{"Под ", "лежачий ", "камень ", "вода ", "не ", "течет"}));
+        System.out.println(replace(string, ", ", 16, 27));
+    }
+
+    public static StringBuilder addTo(String string, String[] strings) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        for (int i = 0; i < strings.length; i++) {
+            stringBuilder.append(strings[i]);
+        }
+        return stringBuilder;
+    }
+
+    public static StringBuilder replace(String string, String str, int start, int end) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        return stringBuilder.replace(start, end, str);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task09.task0919;
+
+/* 
+Разворот строки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Ходит кот задом наперед";
+        System.out.println(string);
+        System.out.println(reverseString(string));
+    }
+
+    public static String reverseString(String string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        return stringBuilder.reverse().toString();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
