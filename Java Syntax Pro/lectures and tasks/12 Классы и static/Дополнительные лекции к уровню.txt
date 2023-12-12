@@ -1,3 +1,5 @@
 https://javarush.com/groups/posts/2535-kak-starik-gumanitariy-v-it-khodil                         // История из лекции 12.0
 
 https://javarush.com/internship                                                                 // Онлайн стажировка из лекции 12.0
+
+https://javarush.com/groups/posts/1964-8-chastihkh-oshibok-nachinajujshikh-programmistov           //8 частых ошибок начинающих программистов

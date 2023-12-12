@@ -1,56 +1,720 @@
+package com.javarush.task.pro.task11.task1101;
+
+/* 
+Солнечная система — наш дом
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println("Человечество живет в Солнечной системе.");
+        System.out.println("Ее возраст около " + SolarSystem.age + " лет.");
+        System.out.println("В Солнечной системе " + SolarSystem.planetsCount + " известных планет.");
+        System.out.println("Как и большинство звездных систем, состоит из " + SolarSystem.starsCount + " звезды.");
+        System.out.println("Звезды по имени " + SolarSystem.starName + ".");
+        System.out.println("Расстояние к центру галактики составляет " + SolarSystem.galacticCenterDistance + " световых лет.");
+        System.out.println("Каждый обитатель Солнечной системы должен знать эту информацию!");
+
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1102;
+
+/* 
+Земля: техническая характеристика
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Planet earth = new Planet();
+        earth.name = "Земля";
+        earth.age = 4_540_000_000L;
+        earth.speed = 170_218;
+        earth.area = 510_072_000;
+        earth.printInformation();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1103;
+
+/* 
+Презентация роботов
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("Презентация роботов произведенных компанией " + Robot.vendor);
+
+        Robot robot1 = new Robot("RCV-322", 2019);
+        robot1.displayInformation();
+
+        Robot robot2 = new Robot("JavaTron-008", 2017);
+        robot2.displayInformation();
+
+        Robot robot3 = new Robot("BugDestroyer-007", 1998);
+        robot3.displayInformation();
+
+        Robot robot4 = new Robot("Gundam-14", 2004);
+        robot4.displayInformation();
+
+        Robot robot5 = new Robot("Eve-2", 2012);
+        robot5.displayInformation();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1103;
+
+/* 
+Презентация роботов
+*/
+
+public class Robot {
+
+    public static int robotCounter;
+
+    public int id;
+
+    public String model;
+
+    public int productionYear;
+
+    public static String vendor = "Javarush Co.";
+
+    public Robot(String model, int productionYear) {
+        this.model = model;
+        this.productionYear = productionYear;
+        this.id = ++robotCounter;
+    }
+
+    public void displayInformation() {
+        System.out.printf("Я %d-й из %d роботов. Модель: %s. Произведен компанией %s в %d году.\n",
+                 id, robotCounter, model, vendor, productionYear);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1104;
+
+/* 
+Конвертер строки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        double aDouble;
+        String string = "12.84";
+        aDouble = Double.parseDouble(string);
+        System.out.println(Math.round(aDouble));
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1105;
+
+/* 
+Оконные работы
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Window window = new Window();
+        window.printSize();
+        window.changeSize(4, 5);
+        window.printSize();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1105;
+
+/* 
+Оконные работы
+*/
+
+public class Window {
+    private int height = 2;
+    private int width = 3;
+
+    public void changeSize(int height, int width){
+        this.height = height;
+        this.width = width;
+    }
+
+    public void printSize(){
+        System.out.println("Height = " + height);
+        System.out.println("Width = " + width);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1106;
+
+/* 
+Одинаковые машины
+*/
+
+public class Car {
+    private String modelName;
+    private int speed;
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1107;
+
+/* 
+Двигатель — сердце автомобиля
+*/
+
+public class Car {
+    private Engine engine;
+
+    class Engine{
+        private boolean isRunning;
+
+        public void start() {
+            isRunning = true;
+        }
+
+        public void stop() {
+            isRunning = false;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1108;
+
+/* 
+Утильный калькулятор
+*/
+
+public class Solution {
+    public static final String EQUAL = " = ";
+
+    public static void main(String[] args) {
+        int a = 69;
+        int b = 31;
+        Calculator.add(a, b);
+        Calculator.subtract(a, b);
+        Calculator.multiply(a, b);
+        Calculator.divide(a, b);
+    }
+
+    public static class Calculator {
+
+        public static void add(int a, int b) {
+            System.out.println(a + " + " + b + EQUAL + (a + b));
+        }
+
+        public static void subtract(int a, int b) {
+            System.out.println(a + " - " + b + EQUAL + (a - b));
+        }
+
+        public static void multiply(int a, int b) {
+            System.out.println(a + " * " + b + EQUAL + (a * b));
+        }
+
+        public static void divide(int a, int b) {
+            System.out.println(a + " / " + b + EQUAL + (a / b));
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1109;
+
+/* 
+Объекты внутренних и вложенных классов
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Outer.Inner inner = new Outer().new Inner();
+        Outer.Nested nested = new Outer.Nested();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1109;
+
+/* 
+Объекты внутренних и вложенных классов
+*/
+
+public class Outer {
+    class Inner {
+        Inner() {
+            System.out.println("Создание объекта внутреннего класса");
+        }
+    }
+    static class Nested {
+        Nested() {
+            System.out.println("Создание объекта вложенного класса");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1110;
+
+/* 
+Точка и запятая
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int number = 1;
+        System.out.println(number);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1111;
+
+/* 
+Ох уж эти кавычки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Amigo";
+        System.out.println(string);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1112;
+
+/* 
+Кон, котэ и нация
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String name = "Diego";
+        int age = 35;
+        System.out.println("Name : " + name + " Age : " + age);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1113;
+
+/* 
+Следим за скобками
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            System.out.println("Windows detected!");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1114;
+
+/* 
+И снова скобки
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int number = 1;
+        if (number < 5) {
+            System.out.println("number < 5");
+        } else {
+            System.out.println();
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1115;
+
+/* 
+Многострадальный метод main
+*/
+
+public class Solution {
+    public static void main(String... errors) {
+        System.out.println("It works!");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1116;
+
+/* 
+Правильный класс
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        System.out.println(cat.name);
+    }
+}
+class Cat {
+    String name = "Tom";
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1117;
+
+/* 
+Пакет нужен?
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println("Test package");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1118;
+
+/* 
+Импортный код
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        java.util.Scanner console = new java.util.Scanner(System.in);
+        if (console.hasNext()) {
+            System.out.println(console.next());
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1119;
+
+import java.util.Objects;
+
+/* 
+Яблоки бывают разные
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        CellPhone cellPhone1 = new CellPhone("Pineapple", "piPhone Z");
+        CellPhone cellPhone2 = new CellPhone("Pineapple", "piPhone Z");
+        if (cellPhone1.equals(cellPhone2)) {
+            System.out.println("телефоны одинаковые");
+        }
+    }
+}
+
+class CellPhone {
+    String vendor;
+    String model;
+
+    public CellPhone(String vendor, String model) {
+        this.vendor = vendor;
+        this.model = model;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CellPhone cellPhone = (CellPhone) o;
+        return Objects.equals(vendor, cellPhone.vendor) &&
+                Objects.equals(model, cellPhone.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vendor, model);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1120;
+
+import java.util.Scanner;
+
+/* 
+Все буквы маленькие
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        String line = console.nextLine();
+        line = line.toLowerCase();
+        System.out.println(line);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1121;
+
+import java.util.Arrays;
+
+/* 
+Забытая инициализация
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int[] array = new int[10];
+        for (int i = 0; i < 10; i++) {
+            array[i] = i;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1122;
+
+/* 
+Затенение поля класса
+*/
+
+public class Solution {
+    public static int salary;
+
+    public static void add(int increase) {
+//        int salary = Solution.salary;
+        salary += increase;
+    }
+
+    public static void main(String[] args) {
+        add(100500);
+        System.out.println(salary);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1123;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/* 
+Почувствуй себя деканом
+*/
+
+public class UniversityGroup {
+    public List<String> students;
+
+    public UniversityGroup() {
+        students = new ArrayList<>();
+        students.add("Сергей Фрединский");
+        students.add("Виталий Правдивый");
+        students.add("Максим Козыменко");
+        students.add("Наталия Андрющенко");
+        students.add("Ира Величенко");
+        students.add("Николай Соболев");
+        students.add("Снежана Слободенюк");
+    }
+
+    public void exclude(String excludedStudent) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).equals(excludedStudent)) {
+                students.remove(i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        UniversityGroup universityGroup = new UniversityGroup();
+        universityGroup.exclude("Виталий Правдивый");
+        universityGroup.students.forEach(System.out::println);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1124;
+
+/* 
+MacCoffee 3 в 1
+*/
+
+public class Coffee {
+    public static class Milk {
+    }
+}
+
+class Sugar {
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1125;
+
+/* 
+Составляем список студентов
+*/
+
+public class University {
+    private final String[] students = new String[30];
+
+    public void addStudent(String student) {
+        int i = 0;
+        for (; i < students.length; i++) {
+            if (students[i] == null) {
+                break;
+            }
+        }
+        students[i] = student;
+    }
+
+    public void printStudents() {
+        for (String student : students) {
+            if (student != null) {
+                System.out.println(student);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        University university = new University();
+        university.addStudent("Максим Федоренко");
+        university.addStudent("Олег Кесарчук");
+        university.printStudents();
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1126;
+
+/* 
+Студент
+*/
+
+public class Student {
+    public String name;
+
+    public Student(String name) {
+        this.name = name;
+    }
+}
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+package com.javarush.task.pro.task11.task1127;
+
+/* 
+Телефон в наследство
+*/
+
+public interface BasicFunctions {
+}
+package com.javarush.task.pro.task11.task1127;
+
+/* 
+Телефон в наследство
+*/
+
+public class Jphone extends SmartPhone {
+}
+package com.javarush.task.pro.task11.task1127;
+
+/* 
+Телефон в наследство
+*/
+
+public interface SmartFunctions extends BasicFunctions {
+}
+package com.javarush.task.pro.task11.task1127;
+
+/* 
+Телефон в наследство
+*/
+
+public class SmartPhone implements SmartFunctions {
+}
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task11.task1128;
+
+/* 
+Текстовые цифры
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        String numberStr = "147852369";
+        for (char symbol : numberStr.toCharArray()) {
+            System.out.print(digitToText(symbol));
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+    public static String digitToText(char digit) {
+        String result = "";
+        switch (digit) {
+            case '0':
+                result = "ноль";
+                break;
+            case '1':
+                result = "один";
+                break;
+            case '2':
+                result = "два";
+                break;
+            case '3':
+                result = "три";
+                break;
+            case '4':
+                result = "четыре";
+                break;
+            case '5':
+                result = "пять";
+                break;
+            case '6':
+                result = "шесть";
+                break;
+            case '7':
+                result = "семь";
+                break;
+            case '8':
+                result = "восемь";
+                break;
+            case '9':
+                result = "девять";
+                break;
+        }
+        return result;
+    }
+}
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
