@@ -1,0 +1,703 @@
+package com.javarush.task.pro.task12.task1201;
+
+/* 
+Автоупаковка
+*/
+
+public class Solution {
+    byte byteValue;
+    short shortValue;
+    int intValue;
+    long longValue;
+
+    float floatValue;
+    double doubleValue;
+
+    char charValue;
+    boolean booleanValue;
+
+    Byte byteValueBox = Byte.valueOf(byteValue);
+    Short shortValueBox = Short.valueOf(shortValue);
+    Integer integerValueBox = Integer.valueOf(intValue);
+    Long longValueBox = Long.valueOf(longValue);
+
+    Float floatValueBox = Float.valueOf(floatValue);
+    Double doubleValueBox = Double.valueOf(doubleValue);
+
+    Character characterValueBox = Character.valueOf(charValue);
+    Boolean booleanValueBox = Boolean.valueOf(booleanValue);
+
+    public static void main(String[] args) {
+
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1202;
+
+/* 
+Распаковка
+*/
+
+public class Solution {
+    Byte byteValueBox;
+    Short shortValueBox;
+    Integer integerValueBox;
+    Long longValueBox;
+
+    Float floatValueBox;
+    Double doubleValueBox;
+
+    Character characterValueBox;
+    Boolean booleanValueBox;
+
+    byte byteValue = byteValueBox.byteValue();
+    short shortValue = shortValueBox.shortValue();
+    int intValue = integerValueBox.intValue();
+    long longValue = longValueBox.longValue();
+
+    float floatValue = floatValueBox.floatValue();
+    double doubleValue = doubleValueBox.doubleValue();
+
+    char charValue = characterValueBox.charValue();
+    boolean booleanValue = booleanValueBox.booleanValue();
+
+    public static void main(String[] args) {
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1203;
+
+/* 
+Сравнение чисел
+*/
+
+public class Solution {
+    static Integer first = 1000;
+    static Integer second = 1000;
+    static int third = 1000;
+
+    public static void main(String[] args) {
+        System.out.println(first.equals(second));
+        System.out.println(third == second);
+        System.out.println(third == first);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1204;
+
+/* 
+Плата по счетам
+*/
+
+public class Solution {
+    public static Integer balance = Integer.MAX_VALUE;
+
+    public static void main(String[] args) {
+        String bill = "1234567890";
+
+        System.out.println("Текущий баланс : " + balance);
+        processPayment(bill);
+        System.out.println("Текущий баланс : " + balance);
+    }
+
+    public static void processPayment(String bill) {
+        balance = balance - Integer.parseInt(bill);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1205;
+
+/* 
+Метод деления
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        divide(1, 0);
+        divide(-1, 0);
+        divide(0, 0);
+        divide(100, 20);
+        divide(200, 20);
+    }
+
+    public static void divide(double a, double b) {
+            System.out.println(a / b);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1206;
+
+/* 
+Анализ строк
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String string = "Думаю, это будет новой фичей." +
+                "Только не говорите никому, что она возникла случайно.";
+
+        System.out.println("Количество цифр в строке : " + countDigits(string));
+        System.out.println("Количество букв в строке : " + countLetters(string));
+        System.out.println("Количество пробелов в строке : " + countSpaces(string));
+    }
+
+    public static int countDigits(String string) {
+        int countDigits = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isDigit(string.charAt(i))) {
+                countDigits++;
+            }
+        }
+        return countDigits;
+    }
+
+    public static int countLetters(String string) {
+        int countLetters = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isLetter(string.charAt(i))) {
+                countLetters++;
+            }
+        }
+        return countLetters;
+    }
+
+    public static int countSpaces(String string) {
+        int countSpaces = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isSpaceChar(string.charAt(i))) {
+                countSpaces++;
+            }
+        }
+        return countSpaces;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1207;
+
+/* 
+Какое число меньше
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int first = 2;
+        int second = 1;
+
+        Boolean isLess = isLess(first, second);
+
+        if (isLess) {
+            System.out.println("Первое число меньше второго");
+        } else {
+            System.out.println("Первое число больше или равно второму числу");
+        }
+    }
+
+    public static Boolean isLess(int first, int second) {
+        return first < second;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1208;
+
+/* 
+Сравнение символов
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        compare('a', 'a');
+        compare('a', 'б');
+        compare('р', 'в');
+        compare('ы', 'ы');
+    }
+
+    public static void compare(Character first, Character second) {
+        if (first.equals(second)) {
+            System.out.println("равны");
+        } else if (first > second) {
+            System.out.println("больше");
+        } else if (first < second) {
+            System.out.println("меньше");
+        } else {
+            System.out.println("А как такое может быть???");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1209;
+
+import java.util.ArrayList;
+
+/* 
+Бухгалтерия
+*/
+
+public class Solution {
+    public static ArrayList<String> waitingEmployees = new ArrayList<>();
+    public static ArrayList<String> alreadyGotSalaryEmployees = new ArrayList<>();
+
+    public static void initEmployees() {
+        waitingEmployees.add("Гвинно");
+        waitingEmployees.add("Гунигерд");
+        waitingEmployees.add("Боргелейф");
+        waitingEmployees.add("Нифрод");
+        waitingEmployees.add("Альбиуф");
+        waitingEmployees.add("Иногрим");
+        waitingEmployees.add("Фриле");
+    }
+
+    public static void main(String[] args) {
+        initEmployees();
+    }
+
+    public static void paySalary(String name) {
+        if (waitingEmployees.contains(name)) {
+            alreadyGotSalaryEmployees.add(name);
+            waitingEmployees.set(waitingEmployees.indexOf(name), null);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1210;
+
+import java.util.ArrayList;
+
+/* 
+Переворачивание данных
+*/
+
+public class Solution {
+    public static ArrayList<Integer> numbers = new ArrayList<>();
+
+    public static void main(String[] args) {
+        init();
+        print();
+
+        reverse();
+        print();
+    }
+
+    public static void init() {
+        for (int i = 0; i < 10; i++) {
+            numbers.add(i);
+        }
+    }
+
+    public static void reverse() {
+        int n = numbers.size() - 1;
+        for (int i = 0; i < numbers.size() / 2; i++) {
+            int temp = numbers.get(i);
+            numbers.set(i, numbers.get(n - i));
+            numbers.set(n - i, temp);
+        }
+    }
+
+    private static void print() {
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1211;
+
+/* 
+Сортировка пузырьком
+*/
+
+public class Solution {
+
+    public static int[] numbers = {56, 45, 89, 1, 45, 13, 4, 69, 11, -89};
+
+    public static void main(String[] args) {
+        print();
+        sort();
+        System.out.println("\nОтсортированные числа в натуральном порядке:");
+        print();
+    }
+
+    public static void sort() {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = 0; j < numbers.length - i - 1; j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void print() {
+        for (int number : numbers) {
+            System.out.print(number + "\t");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1212;
+
+/* 
+Создаем свой список
+*/
+
+public class CustomStringArrayList {
+
+    private int size;
+    private int capacity;
+    private String[] elements;
+
+    public CustomStringArrayList() {
+        capacity = 10;
+        size = 0;
+        elements = new String[capacity];
+    }
+
+    public void add(String element) {
+        if (size == capacity) {
+            grow();
+        }
+        elements[size] = element;
+        size++;
+    }
+
+    private void grow() {
+        capacity = (int) (capacity *  1.5);
+        String[] newElements = new String[capacity];
+        for (int i = 0; i < elements.length; i++) {
+            newElements[i] = elements[i];
+        }
+        elements = newElements;
+    }
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1213;
+
+import java.util.ArrayList;
+
+/* 
+Солнечная система
+*/
+
+public class Solution {
+    public static ArrayList<String> planets = new ArrayList<>();
+
+    public static void main(String[] args) {
+        addPlanets();
+        print();
+        createNewPlanet("Звезда Смерти");
+        print();
+    }
+
+    public static void createNewPlanet(String planetName) {
+        planets.add(planets.indexOf("Земля") + 1, planetName);
+    }
+
+    public static void addPlanets() {
+        planets.add("Меркурий");
+        planets.add("Венера");
+        planets.add("Земля");
+        planets.add("Марс");
+        planets.add("Юпитер");
+        planets.add("Сатурн");
+        planets.add("Уран");
+        planets.add("Нептун");
+    }
+
+    public static void print() {
+        for (int i = 0; i < planets.size(); i++) {
+            System.out.println(String.format("%s — %d-я планета от Солнца", planets.get(i), (i + 1)));
+        }
+        System.out.println();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1214;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+/* 
+Прощай, Паскаль
+*/
+
+public class Solution {
+    public static ArrayList<String> programmingLanguages = new ArrayList<>(Arrays.asList("C", "C++", "Python", "Java", "Pascal", "JavaScript", "Ruby"));
+
+    public static void main(String[] args) {
+        for (int i = 0; i < programmingLanguages.size(); i++) {
+            if (programmingLanguages.get(i).equals("Pascal")) {
+                programmingLanguages.remove(i);
+                break;
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1215;
+
+import java.util.ArrayList;
+
+/* 
+Разбираем пирамиду бокалов
+*/
+
+public class Solution {
+
+    private static ArrayList<String> initList() {
+        String glassTop     = "       🍷       ";
+        String glassSecond  = "      🍷🍷      ";
+        String glassThird   = "     🍷🍷🍷     ";
+        String glassFourth  = "    🍷🍷🍷🍷    ";
+        String glassFifth   = "   🍷🍷🍷🍷🍷   ";
+        String glassSixth   = "  🍷🍷🍷🍷🍷🍷  ";
+        String glassSeventh = " 🍷🍷🍷🍷🍷🍷🍷 ";
+        String glassEighth  = "🍷🍷🍷🍷🍷🍷🍷🍷";
+        ArrayList<String> list = new ArrayList<>();
+        list.add(glassEighth);
+        list.add(glassSeventh);
+        list.add(glassSixth);
+        list.add(glassFifth);
+        list.add(glassFourth);
+        list.add(glassThird);
+        list.add(glassSecond);
+        list.add(glassTop);
+        return list;
+    }
+
+    public static void print(ArrayList<String> glasses) {
+        for(int i = glasses.size() - 1; i >= 0; i--) {
+            System.out.println(glasses.get(i));
+        }
+    }
+
+    public static void removeGlassesReverse(ArrayList<String> glasses) {
+        System.out.println("Начинаем разбирать пирамиду...");
+
+        for (int i = glasses.size() - 1; i >= 0; i--) {
+            glasses.remove(i);
+        }
+
+        if(glasses.size() == 0) {
+            System.out.println("Пирамида разобрана!");
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> glasses = initList();
+        print(glasses);
+
+        removeGlassesReverse(glasses);
+        print(glasses);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1216;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+/* 
+Вперед в будущее
+*/
+
+public class Solution {
+    private int number = 54;
+    private String string = "string";
+
+    public static void main(String[] args) {
+        var integer = 22;
+        var string = "string";
+        var array = new int[5];
+        var strings = new ArrayList<String>();
+        var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        var maxValue = Integer.valueOf(Integer.MAX_VALUE);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1217;
+
+/* 
+Назад в прошлое
+*/
+
+public class Solution {
+    private int[] intArray = new int[4];
+
+    public int[] getIntArray() {
+        return intArray;
+    }
+
+    public void setIntArray(int[] intArray) {
+        this.intArray = intArray;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String string = new String("Hello");
+        StringBuilder stringBuilder = new StringBuilder();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1218;
+
+
+import java.io.File;
+import java.util.*;
+
+/* 
+Shine bright like a diamond
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        ArrayList<String> stringArrayList = new ArrayList<>();
+        Stack<String> stack = new Stack<>();
+        Map<String, ArrayList<String>> map = new HashMap<>();
+        var exceptionsList = new ArrayList<Exception>();
+        var filesStack = new Stack<File>();
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1219;
+
+import java.util.ArrayList;
+
+/* 
+Двойные фигурные скобки
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        var strings = new ArrayList<String>(){{
+            add("Так");
+            add("тоже");
+            add("можно");
+            add("делать");
+            add("!");
+        }};
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1220;
+
+import java.util.ArrayList;
+
+/* 
+Охотники за привидением: в погоне за типами
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        var elements = new ArrayList<>();
+        elements.add("Привет");
+        elements.add(10);
+        elements.add(new Integer[15]);
+        elements.add(new LinkageError());
+
+        checkElementsType(elements);
+    }
+
+    public static void checkElementsType(ArrayList<Object> elements) {
+        for (int i = 0; i < elements.size(); i++) {
+            if (elements.get(i) instanceof String) {
+                printString();
+            } else if (elements.get(i) instanceof Integer) {
+                printInteger();
+            } else if (elements.get(i) instanceof Integer[]) {
+                printIntegerArray();
+            } else {
+                printUnknown();
+            }
+        }
+    }
+
+    public static void printString() {
+        System.out.println("Строка");
+    }
+
+    public static void printInteger() {
+        System.out.println("Целое число");
+    }
+
+    public static void printIntegerArray() {
+        System.out.println("Массив целых чисел");
+    }
+
+    public static void printUnknown() {
+        System.out.println("Другой тип данных");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1221;
+
+public class Student {
+    private String name;
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package com.javarush.task.pro.task12.task1222;
+
+import java.util.ArrayList;
+
+/* 
+Выводим в консоли разные типы
+*/
+
+public class Solution {
+
+    public static void printAnything(ArrayList arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.get(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        var arrayList = new ArrayList<>();
+        arrayList.add(15);
+        arrayList.add("Hello");
+        arrayList.add(154);
+        arrayList.add("string");
+
+        printAnything(arrayList);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,7 @@
+https://javarush.com/groups/posts/1948-objertki-raspakovka-i-zapakovka                      //Обёртки, распаковка и запаковка
+
+https://javarush.com/groups/posts/klass-arraylist                                        //Класс ArrayList в Java
+
+https://javarush.com/groups/posts/1935-udalenie-ehlementa-iz-spiska-arraylist           //Удаление элемента из списка ArrayList в Java
+
+https://javarush.com/groups/posts/1936-rabota-arraylist-v-kartinkakh--                 //Java ArrayList в картинках
