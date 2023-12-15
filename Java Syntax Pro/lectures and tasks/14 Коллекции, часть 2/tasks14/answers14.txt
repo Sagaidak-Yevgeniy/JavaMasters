@@ -1,0 +1,850 @@
+package com.javarush.task.pro.task13.task1301;
+
+import java.util.HashSet;
+
+/* 
+Оформляем возврат
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String[] array = {"Через", "три", "года", "я", "буду", "Senior", "Java", "Developer"};
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+        System.out.println("___________________________________");
+
+        HashSet<String> hashSet = arrayToHashSet(array);
+        for(String s : hashSet) {
+            System.out.println(s);
+        }
+    }
+
+    public static HashSet<String> arrayToHashSet(String[] strings) {
+        HashSet<String> hashSet = new HashSet<>();
+        for (int i = 0; i < strings.length; i++) {
+            hashSet.add(strings[i]);
+        }
+        return hashSet;
+    }
+}
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1302;
+
+import java.util.HashSet;
+
+import static java.util.Arrays.asList;
+
+/* 
+Проверка присутствия
+*/
+
+public class Solution {
+    public static HashSet<String> words = new HashSet<>(asList("Если бы меня попросили выбрать язык на замену Java я бы не выбирал".split(" ")));
+
+    public static void checkWords(String word) {
+        if (words.contains(word)) {
+            System.out.println(String.format("Слово %s есть в множестве", word));
+        } else {
+            System.out.println(String.format("Слова %s нет в множестве", word));
+        }
+    }
+
+    public static void main(String[] args) {
+        checkWords("JavaScript");
+        checkWords("Java");
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1303;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+
+/* 
+Выводим в консоли элементы множества
+*/
+
+public class Solution {
+
+    public static void print(HashSet<String> words) {
+        Iterator<String> iterator = words.iterator();
+        while (iterator.hasNext()) {
+            String word = iterator.next();
+            System.out.println(word);
+        }
+    }
+
+    public static void main(String[] args) {
+        HashSet<String> words = new HashSet<>(Arrays.asList("Программированию обычно учат на примерах.".split(" ")));
+        print(words);
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1304;
+
+import java.util.*;
+
+/* 
+Переводим итератор в цикл for-each
+*/
+
+public class Solution {
+
+    public static void printList(ArrayList<String> words) {
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+
+    public static void printHashSet(HashSet<String> words) {
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] wordsArray = "Думаю, это будет новой фичей. Только не говорите никому, что она возникла случайно.".split(" ");
+        ArrayList<String> wordsList = new ArrayList<>(Arrays.asList(wordsArray));
+        HashSet<String> wordsHashSet = new HashSet<>(wordsList);
+        printList(wordsList);
+        System.out.println("__________________________________");
+        printHashSet(wordsHashSet);
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1305;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/* 
+Найти и обезвредить
+*/
+
+public class Solution {
+    public static String bug = "bug";
+
+    public static void main(String[] args) {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Hello world!");
+        words.add("Amigo");
+        words.add("Elly");
+        words.add("Kerry");
+        words.add("Bug");
+        words.add("bug");
+        words.add("Easy ug");
+        words.add("Risha");
+
+        ArrayList<String> copyWordsFirst = new ArrayList<>(words);
+        ArrayList<String> copyWordsSecond = new ArrayList<>(words);
+        ArrayList<String> copyWordsThird = new ArrayList<>(words);
+
+        removeBugWithFor(copyWordsFirst);
+        removeBugWithWhile(copyWordsSecond);
+        removeBugWithCopy(copyWordsThird);
+
+        copyWordsFirst.forEach(System.out::println);
+        String line = "_________________________";
+        System.out.println(line);
+        copyWordsSecond.forEach(System.out::println);
+        System.out.println(line);
+        copyWordsThird.forEach(System.out::println);
+        System.out.println(line);
+    }
+
+    public static void removeBugWithFor(ArrayList<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            String str = list.get(i);
+            if (bug.equalsIgnoreCase(str)) {
+                list.remove(str);
+                i--;
+            }
+        }
+    }
+
+    public static void removeBugWithWhile(ArrayList<String> list) {
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            String str = it.next();
+            if (bug.equalsIgnoreCase(str)) {
+                it.remove();
+            }
+        }
+    }
+
+    public static void removeBugWithCopy(ArrayList<String> list) {
+        ArrayList<String> listCopy = new ArrayList<>(list);
+        for (String str : listCopy) {
+            if (bug.equalsIgnoreCase(str)) {
+                list.remove(str);
+            }
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1306;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/* 
+Изучаем методы класса Collections, часть 1
+*/
+
+public class Solution {
+
+    public static void copy(ArrayList<String> destination, ArrayList<String> source) {
+        Collections.copy(destination, source);
+    }
+
+    public static void addAll(ArrayList<String> list, String... strings) {
+        Collections.addAll(list, strings);
+    }
+
+    public static void replaceAll(ArrayList<String> list, String oldValue, String newValue) {
+        Collections.replaceAll(list, oldValue, newValue);
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1307;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/* 
+Изучаем методы класса Collections, часть 2
+*/
+
+public class Solution {
+
+    public static void reverse(ArrayList<Integer> list) {
+        Collections.reverse(list);
+    }
+
+    public static void sort(ArrayList<Integer> list) {
+        Collections.sort(list);
+    }
+
+    public static void rotate(ArrayList<Integer> list, int distance) {
+        Collections.rotate(list, distance);
+    }
+
+    public static void shuffle(ArrayList<Integer> list) {
+        Collections.shuffle(list);
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1308;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/* 
+Изучаем методы класса Collections, часть 3
+*/
+
+public class Solution {
+
+    public static Integer min(ArrayList<Integer> list) {
+        return Collections.min(list);
+    }
+
+    public static Integer max(ArrayList<Integer> list) {
+        return Collections.max(list);
+    }
+
+    public static int frequency(ArrayList<Integer> list, Integer element) {
+        return Collections.frequency(list, element);
+    }
+
+    public static int binarySearch(ArrayList<Integer> list, Integer key) {
+        return Collections.binarySearch(list, key);
+    }
+}
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task13.task1309;
+
+import java.util.HashMap;
+
+/* 
+Успеваемость студентов
+*/
+
+public class Solution {
+    public static HashMap<String, Double> grades = new HashMap<>();
+
+    public static void main(String[] args) {
+        addStudents();
+        System.out.println(grades);
+    }
+
+    public static void addStudents() {
+        grades.put("Давыдов Олег", 4.3d);
+        grades.put("Шульга Николай", 4.1d);
+        grades.put("Колос Василий", 4.9d);
+        grades.put("Шевченко Тарас", 3.7d);
+        grades.put("Марчук Любослав", 3.2d);
+    }
+}
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1310;
+
+import java.util.HashMap;
+
+/* 
+Успеваемость студентов-2
+*/
+
+public class Solution {
+    public static HashMap<String, Double> grades = new HashMap<>();
+
+    public static void main(String[] args) {
+        addStudents();
+        System.out.println("Список студентов группы: ");
+        printStudents();
+        System.out.print("Средний балл группы: " + getAverageMark());
+    }
+
+    public static void addStudents() {
+        grades.put("Давыдов Олег", 4.3d);
+        grades.put("Шульга Николай", 4.1d);
+        grades.put("Колос Василий", 4.9d);
+        grades.put("Шевченко Тарас", 3.7d);
+        grades.put("Марчук Любослав", 3.2d);
+    }
+
+    public static void printStudents() {
+        for (String name : grades.keySet()) {
+            System.out.println(name);
+        }
+    }
+
+    public static Double getAverageMark() {
+        Double identity = 0d;
+        for (Double value : grades.values()) {
+            identity += value;
+        }
+        return identity / grades.size();
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1311;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/* 
+Успеваемость студентов-3
+*/
+
+public class Solution {
+    public static HashMap<String, Double> grades = new HashMap<>();
+
+    public static void main(String[] args) {
+        addStudents();
+        printStudentsInfo();
+    }
+
+    public static void addStudents() {
+        grades.put("Кесарчук Олег", 4.3d);
+        grades.put("Шульга Николай", 4.1d);
+        grades.put("Колос Василий", 4.9d);
+        grades.put("Шевченко Тарас", 3.7d);
+        grades.put("Марчук Любослав", 3.2d);
+    }
+
+    public static void printStudentsInfo() {
+        for (Map.Entry<String, Double> pair : grades.entrySet()) {
+            String key = pair.getKey();
+            Double value = pair.getValue();
+            System.out.println(key + " : " + value);
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1312;
+
+import java.util.HashMap;
+
+/* 
+ArrayList vs HashMap
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getProgrammingLanguages());
+    }
+
+    public static HashMap<Integer, String> getProgrammingLanguages() {
+        HashMap<Integer, String> programmingLanguages = new HashMap<>();
+        programmingLanguages.put(0, "Java");
+        programmingLanguages.put(1, "Kotlin");
+        programmingLanguages.put(2, "Go");
+        programmingLanguages.put(3, "Javascript");
+        programmingLanguages.put(4, "Typescript");
+        programmingLanguages.put(5, "Python");
+        programmingLanguages.put(6, "PHP");
+        programmingLanguages.put(7, "C++");
+        return programmingLanguages;
+    }
+
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1313;
+
+/* 
+StringLinkedList
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        StringLinkedList stringLinkedList = new StringLinkedList();
+        stringLinkedList.add("1");
+        stringLinkedList.add("2");
+        stringLinkedList.add("3");
+        stringLinkedList.add("4");
+        stringLinkedList.add("5");
+        stringLinkedList.add("6");
+        stringLinkedList.add("7");
+        stringLinkedList.add("8");
+        stringLinkedList.add("9");
+        stringLinkedList.printAll();
+    }
+}
+
+
+package com.javarush.task.pro.task13.task1313;
+
+public class StringLinkedList {
+    private Node first = new Node();
+    private Node last = new Node();
+
+    public StringLinkedList() {
+        first.next = last;
+        last.prev = first;
+    }
+
+    public void printAll() {
+        Node currentElement = first.next;
+        while ((currentElement) != null) {
+            System.out.println(currentElement.value);
+            currentElement = currentElement.next;
+        }
+    }
+
+    public void add(String value) {
+        Node node = new Node();
+        node.value = value;
+
+        Node lastNode = last.prev;
+        lastNode.next = node;
+        node.prev = lastNode;
+        last.prev = node;
+    }
+
+    public static class Node {
+        private Node prev;
+        private String value;
+        private Node next;
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1314;
+
+/* 
+StringLinkedList, часть 2
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        StringLinkedList stringLinkedList = new StringLinkedList();
+        stringLinkedList.add("1");
+        stringLinkedList.add("2");
+        stringLinkedList.add("3");
+        stringLinkedList.add("4");
+        stringLinkedList.add("5");
+        stringLinkedList.add("6");
+        stringLinkedList.add("7");
+        stringLinkedList.add("8");
+        stringLinkedList.add("9");
+        System.out.println(stringLinkedList.get(4)); // 5
+    }
+}
+
+
+package com.javarush.task.pro.task13.task1314;
+
+public class StringLinkedList {
+    private Node first = new Node();
+    private Node last = new Node();
+
+    public StringLinkedList() {
+        first.next = last;
+        last.prev = first;
+    }
+
+    public void add(String value) {
+        Node node = new Node();
+        node.value = value;
+
+        Node lastNode = last.prev;
+        lastNode.next = node;
+        node.prev = lastNode;
+        last.prev = node;
+    }
+
+    public String get(int index) {
+        int currentIndex = 0;
+        Node currentElement = first.next;
+        while ((currentElement) != null) {
+            if (currentIndex == index) {
+                return currentElement.value;
+            }
+            currentElement = currentElement.next;
+            currentIndex++;
+        }
+        return null;
+    }
+
+    public static class Node {
+        private Node prev;
+        private String value;
+        private Node next;
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1315;
+
+/* 
+Четыре сезона
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(Season.WINTER);
+        System.out.println(Season.SPRING);
+        System.out.println(Season.SUMMER);
+        System.out.println(Season.AUTUMN);
+    }
+}
+
+
+
+package com.javarush.task.pro.task13.task1315;
+
+public enum Season {
+    WINTER,
+    SPRING,
+    SUMMER,
+    AUTUMN
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1316;
+
+public class Solution {
+    public static void main(String[] args) {
+        JavarushQuest[] values = JavarushQuest.values();
+        for (JavarushQuest value : values) {
+            System.out.println(value.ordinal());
+        }
+    }
+}
+
+package com.javarush.task.pro.task13.task1316;
+
+/* 
+Перечислим квесты Javarush
+*/
+
+public enum JavarushQuest {
+    JAVA_SYNTAX,
+    JAVA_CORE,
+    JAVA_MULTITHREADING,
+    JAVA_COLLECTIONS,
+    CS_50,
+    ANDROID,
+    GAMES
+}
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task13.task1317;
+
+/* 
+Трансформируем enum в класс
+*/
+
+public class Month {
+    public static final Month JANUARY = new Month(0);
+    public static final Month FEBRUARY = new Month(1);
+    public static final Month MARCH = new Month(2);
+    public static final Month APRIL = new Month(3);
+    public static final Month MAY = new Month(4);
+    public static final Month JUNE = new Month(5);
+    public static final Month JULY = new Month(6);
+    public static final Month AUGUST = new Month(7);
+    public static final Month SEPTEMBER = new Month(8);
+    public static final Month OCTOBER = new Month(9);
+    public static final Month NOVEMBER = new Month(10);
+    public static final Month DECEMBER = new Month(11);
+    private static final Month[] VALUES = {JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER};
+
+    private final int value;
+
+    private Month(int value) {
+        this.value = value;
+    }
+
+    public int ordinal() {
+        return value;
+    }
+
+    public static Month[] values() {
+        return VALUES;
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1318;
+
+/* 
+Следующий месяц, пожалуйста
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getNextMonth(Month.JANUARY));
+        System.out.println(getNextMonth(Month.JULY));
+    }
+
+    public static Month getNextMonth(Month month) {
+        int ordinal = month == Month.DECEMBER ? 0 : month.ordinal() + 1;
+        return Month.values()[ordinal];
+    }
+}
+
+
+package com.javarush.task.pro.task13.task1318;
+
+public enum Month {
+    JANUARY,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1319;
+
+/* 
+Месяцы в сезоне
+*/
+
+public enum Month {
+    JANUARY,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER;
+
+    public static Month[] getWinterMonths() {
+        return new Month[]{DECEMBER, JANUARY, FEBRUARY};
+    }
+
+    public static Month[] getSpringMonths() {
+        return new Month[]{MARCH, APRIL, MAY};
+    }
+
+    public static Month[] getSummerMonths() {
+        return new Month[]{JUNE, JULY, AUGUST};
+    }
+
+    public static Month[] getAutumnMonths() {
+        return new Month[]{SEPTEMBER, OCTOBER, NOVEMBER};
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1320;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getMonthByIndex(4));
+        System.out.println(getMonthByIndex(8));
+        System.out.println(getMonthByIndex(12));
+    }
+
+    public static String getMonthByIndex(int month) {
+        String monthString;
+        switch (month) {
+            case 1:
+                monthString = "Январь";
+                break;
+            case 2:
+                monthString = "Февраль";
+                break;
+            case 3:
+                monthString = "Март";
+                break;
+            case 4:
+                monthString = "Апрель";
+                break;
+            case 5:
+                monthString = "Май";
+                break;
+            case 6:
+                monthString = "Июнь";
+                break;
+            case 7:
+                monthString = "Июль";
+                break;
+            case 8:
+                monthString = "Август";
+                break;
+            case 9:
+                monthString = "Сентябрь";
+                break;
+            case 10:
+                monthString = "Октябрь";
+                break;
+            case 11:
+                monthString = "Ноябрь";
+                break;
+            case 12:
+                monthString = "Декабрь";
+                break;
+            default:
+                monthString = "Недействительный месяц";
+                break;
+        }
+        return monthString;
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task13.task1321;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getTranslationForDayOfWeek("Вторник"));
+        System.out.println(getTranslationForDayOfWeek("Пятница"));
+        System.out.println(getTranslationForDayOfWeek("Высплюсенье"));
+    }
+
+    public static String getTranslationForDayOfWeek(String ru) {
+        String en;
+        if ("понедельник".equals(ru.toLowerCase())) {
+            en = "Monday";
+        } else if ("вторник".equals(ru.toLowerCase())) {
+            en = "Tuesday";
+        } else if ("среда".equals(ru.toLowerCase())) {
+            en = "Wednesday";
+        } else if ("четверг".equals(ru.toLowerCase())) {
+            en = "Thursday";
+        } else if ("пятница".equals(ru.toLowerCase())) {
+            en = "Friday";
+        } else if ("суббота".equals(ru.toLowerCase())) {
+            en = "Saturday";
+        } else if ("воскресенье".equals(ru.toLowerCase())) {
+            en = "Sunday";
+        } else {
+            en = "Недействительный день недели";
+        }
+        return en;
+
+    }
+}
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task13.task1322;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println(getShapeNameByCountOfCorners(3));
+        System.out.println(getShapeNameByCountOfCorners(5));
+        System.out.println(getShapeNameByCountOfCorners(1));
+    }
+
+    public static String getShapeNameByCountOfCorners(int countOfCorner) {
+        switch (countOfCorner) {
+            case 3:
+                return "Треугольник";
+            case 4:
+                return "Четырехугольник";
+            case 5:
+                return "Пятиугольник";
+            case 6:
+                return "Шестиугольник";
+            case 7:
+                return "Семиугольник";
+            case 8:
+                return "Восьмиугольник";
+            default:
+                return "Другая фигура";
+        }
+    }
+}
+
+----------------------------------------------------------------------
+
