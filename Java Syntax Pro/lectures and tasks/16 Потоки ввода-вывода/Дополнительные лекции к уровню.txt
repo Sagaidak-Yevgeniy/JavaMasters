@@ -1,0 +1,4 @@
+https://javarush.com/groups/posts/2020-vvod-vihvod-v-java-klassih-fileinputstream-fileoutputstream-bufferedinputstream                 //Ввод-вывод в Java. Классы FileInputStream, FileOutputStream, BufferedInputStream
+
+
+https://javarush.com/groups/posts/2275                                                                                       //Java Files, Path

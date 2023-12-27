@@ -1,0 +1,9 @@
+https://javarush.com/groups/posts/1967-otnoshenija-mezhdu-klassami-nasledovanie-kompozicija-i-agregirovanie-          //Отношения между классами. Наследование, композиция и агрегирование
+
+https://javarush.com/groups/posts/1969-principih-inkapsuljacii                                                   //Принципы инкапсуляции в Java
+
+https://javarush.com/groups/posts/1974-praktika-ispoljhzovanija-polimorfizma                                //Практика использования полиморфизма
+
+https://javarush.com/groups/posts/1981-dlja-chego-v-java-nuzhnih-interfeysih                            //Интерфейсы в Java
+
+https://javarush.com/groups/posts/1985-raznica-mezhdu-abstraktnihmi-klassami-i-interfeysami                //Разница между абстрактными классами и интерфейсами
