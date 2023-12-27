@@ -1,0 +1,4 @@
+https://javarush.com/groups/posts/1943-iskljuchenija-perekhvat-i-obrabotka                                    // Исключения в Java: перехват и обработка
+
+
+https://javarush.com/groups/posts/1944-iskljuchenija-checked-unchecked-i-svoi-sobstvennihe                   // https://javarush.com/groups/posts/1944-iskljuchenija-checked-unchecked-i-svoi-sobstvennihe
