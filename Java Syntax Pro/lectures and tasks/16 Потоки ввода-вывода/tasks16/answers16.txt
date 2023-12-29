@@ -1,152 +1,672 @@
+package com.javarush.task.pro.task15.task1501;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/* 
+Сокращаем try
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            String line = reader.readLine();
+            System.out.println(line.toLowerCase());
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1502;
+
+import java.util.Scanner;
+
+/* 
+Возврат к истокам
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(System.in);
+            String line = scanner.nextLine();
+            System.out.println(line.toUpperCase());
+        } catch (Exception e) {
+            System.out.println("Something went wrong : " + e);
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1503;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Если ресурсов много
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in);
+             BufferedReader bufferedReader = Files.newBufferedReader(Path.of(scanner.nextLine()))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1504;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+/* 
+Перепутанные байты
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in);
+             var inputStream = Files.newInputStream(Paths.get(scanner.nextLine()));
+             var outputStream = Files.newOutputStream(Paths.get(scanner.nextLine()))
+        ) {
+            byte[] bytesIn = inputStream.readAllBytes();
+            byte[] bytesOut = new byte[bytesIn.length];
+            for (int i = 0; i < bytesIn.length; i += 2) {
+                if (i < bytesIn.length - 1) {
+                    bytesOut[i] = bytesIn[i + 1];
+                    bytesOut[i + 1] = bytesIn[i];
+                } else {
+                    bytesOut[i] = bytesIn[i];
+                }
+            }
+            outputStream.write(bytesOut);
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1505;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+/* 
+Что-то не копируется...
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in);
+             var inputStream = Files.newInputStream(Paths.get(scanner.nextLine()));
+             var outputStream = Files.newOutputStream(Paths.get(scanner.nextLine()))
+        ) {
+            byte[] buffer = new byte[1024];
+            while (inputStream.available() > 0) {
+                int read = inputStream.read(buffer);
+                outputStream.write(buffer, 0, read);
+            }
+        } catch (Exception e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1506;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Scanner;
+
+/* 
+Фейсконтроль
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            List<String> lines = Files.readAllLines(Paths.get(scanner.nextLine()));
+            lines.forEach(str -> {
+                char[] chars = str.toCharArray();
+                for (char character : chars) {
+                    if (character != ' ' && character != '.' && character != ',') {
+                        System.out.print(character);
+                    }
+                }
+            });
+        } catch (Exception e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1507;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Scanner;
+
+/* 
+Пропускаем не всех
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        List<String> lines = Files.readAllLines(Path.of(scanner.nextLine()));
+
+        for (int i = 0; i < lines.size(); i += 2) {
+            System.out.println(lines.get(i));
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1508;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+/* 
+Читаем из консоли
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        try (InputStream stream = System.in;
+             InputStreamReader reader = new InputStreamReader(stream);
+             BufferedReader buff = new BufferedReader(reader)) {
+            String line = buff.readLine();
+            char[] chars = line.toCharArray();
+            for (int i = 0; i < chars.length; i++) {
+                if (i % 2 == 1) {
+                    System.out.print(String.valueOf(chars[i]).toUpperCase());
+                } else {
+                    System.out.print(String.valueOf(chars[i]).toLowerCase());
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1509;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+/* 
+Еще раз читаем из консоли
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        try (InputStream stream = System.in;
+             Scanner scanner = new Scanner(stream)) {
+            String line = scanner.nextLine();
+            char[] chars = line.toCharArray();
+            Set<Character> characters = new HashSet<>();
+            for (char aChar : chars) {
+                if (Character.isAlphabetic(aChar)) {
+                    characters.add(Character.toLowerCase(aChar));
+                }
+            }
+            System.out.println(characters);
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1510;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Пишем байты в файл
+*/
+
+public class Solution {
+
+    public static void main(String[] args) throws IOException {
+        byte[] bytes = args[0].getBytes();
+        Scanner scanner = new Scanner(System.in);
+        Files.write(Path.of(scanner.nextLine()), bytes);
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1511;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Пишем символы в файл
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        char[] chars = args[0].toCharArray();
+        try (InputStream stream = System.in;
+             Scanner scanner = new Scanner(stream);
+             BufferedWriter bufferedWriter = Files.newBufferedWriter(Path.of(scanner.nextLine()))) {
+            bufferedWriter.write(chars);
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1512;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+/* 
+Задом наперед
+*/
+
+public class Solution {
+    public static ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    public static PrintStream stream = new PrintStream(outputStream);
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        printSomething(scanner.nextLine());
+        String result = outputStream.toString();
+        outputStream.reset();
+        StringBuilder stringBuilder = new StringBuilder(result);
+        String reverse = stringBuilder.reverse().toString();
+        printSomething(reverse);
+        System.out.println(outputStream);
+    }
+
+    public static void printSomething(String str) {
+        stream.print(str);
+    }
+}
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1513;
+
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Зри в корень
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        Path path = Path.of(str).getRoot();
+        System.out.println(path);
+    }
+}
+
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task15.task1514;
+
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Все относительно
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        Path path1 = Path.of(str1);
+        Path path2 = Path.of(str2);
+        try {
+            System.out.println(path1.relativize(path2));
+        } catch (Exception ignored) {
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1515;
+
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Абсолютный путь
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        if (Path.of(str).isAbsolute()) {
+            System.out.println(str);
+        } else {
+            System.out.println(Path.of(str).toAbsolutePath());
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task15.task1516;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Файл или директория
+*/
+
+public class Solution {
+
+    private static final String THIS_IS_FILE = " - это файл";
+    private static final String THIS_IS_DIR = " - это директория";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String str = scanner.nextLine();
+            if (str.isEmpty()) {
+                break;
+            }
+            if (Files.isRegularFile(Path.of(str))) {
+                System.out.println(str + THIS_IS_FILE);
+            } else if (Files.isDirectory(Path.of(str))) {
+                System.out.println(str + THIS_IS_DIR);
+            } else {
+                break;
+            }
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1517;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Файловые операции
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        Path filePath = Path.of(scanner.nextLine());
+        Path fileNewPath = Path.of(scanner.nextLine());
+        if (Files.notExists(filePath)) {
+            Files.createFile(filePath);
+        } else if (Files.notExists(fileNewPath)) {
+            Files.move(filePath, fileNewPath);
+        } else {
+            Files.delete(filePath);
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1518;
+
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+А что же внутри папки?
+*/
+
+public class Solution {
+
+    private static final String THIS_IS_FILE = " - это файл";
+    private static final String THIS_IS_DIR = " - это директория";
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        Path directory = Path.of(scanner.nextLine());
+        try (DirectoryStream<Path> paths = Files.newDirectoryStream(directory)) {
+            for (Path path : paths) {
+                if (Files.isRegularFile(path)) {
+                    System.out.println(path.toString() + THIS_IS_FILE);
+                } else if (Files.isDirectory(path)) {
+                    System.out.println(path.toString() + THIS_IS_DIR);
+                }
+            }
+        }
+    }
+}
+
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task15.task1519;
+
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Поверхностное копирование
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        Path sourceDirectory = Path.of(scanner.nextLine());
+        Path targetDirectory = Path.of(scanner.nextLine());
+        try (DirectoryStream<Path> files = Files.newDirectoryStream(sourceDirectory)) {
+            for (Path path : files) {
+                if (Files.isRegularFile(path)) {
+                    Path resolve = targetDirectory.resolve(path.getFileName());
+                    Files.copy(path, resolve);
+                }
+            }
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1520;
+
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Перемещение файлов
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        Path sourceDirectory = Path.of(scanner.nextLine());
+        Path targetDirectory = Path.of(scanner.nextLine());
+        try (DirectoryStream<Path> files = Files.newDirectoryStream(sourceDirectory)) {
+            for (Path path : files) {
+                if (Files.isRegularFile(path)) {
+                    Path resolve = targetDirectory.resolve(path.getFileName());
+                    Files.move(path, resolve);
+                }
+            }
+        }
+    }
+}
+
+
+----------------------------------------------------------------------
+
+package com.javarush.task.pro.task15.task1521;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/* 
+Временное сохранение файла
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        URL url = new URL(line);
+        InputStream input = url.openStream();
+
+        Path tempFile = Files.createTempFile(null, null);
+        Files.write(tempFile, input.readAllBytes());
+    }
+}
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1522;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+
+/* 
+Получение информации по API
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        URL url = new URL("https://javarush.ru/api/1.0/rest/projects");
+        InputStream input = url.openStream();
+        byte[] buffer = input.readAllBytes();
+        String str = new String(buffer);
+        System.out.println(str);
+    }
+}
+
+
+----------------------------------------------------------------------
+package com.javarush.task.pro.task15.task1523;
+
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+
+/* 
+Получение информации по API2
+*/
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        URL url = new URL("http://httpbin.org/post");
+        URLConnection connection = url.openConnection();
+        connection.setDoOutput(true);
+
+        try (OutputStream output = connection.getOutputStream();
+             PrintStream sender = new PrintStream(output)) {
+            sender.println("Привет");
+        }
+
+        try (InputStream input = connection.getInputStream();
+             BufferedReader reader = new BufferedReader(new InputStreamReader(input))) {
+            while (reader.ready()) {
+                System.out.println(reader.readLine());
+            }
+        }
+    }
+}
+
 
 ----------------------------------------------------------------------
 
 
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
